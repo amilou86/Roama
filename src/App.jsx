@@ -9,6 +9,7 @@ function App() {
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Scroll from './components/Scroll/scroll.jsx';
 import './App.css'
 import Search from "./components/left-nav/search"
 
