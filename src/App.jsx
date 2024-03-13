@@ -1,9 +1,10 @@
+
 import Search from "./components/left-nav/search";
-import FriendList from "./components/FriendList/friendList";
+import FriendList from "./components/FriendList/friendsList.jsx"
 import Scroll from "./components/Scroll/scroll.jsx";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as bootstrap from "bootstrap";
+
 
 function App() {
   return (

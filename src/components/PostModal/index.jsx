@@ -16,11 +16,11 @@ export default function Post() {
                             <h1 className="modal-title fs-5" id="post">Post a Roama</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                         </div>
-                        <div className="modal-body d-flex">
-                            <div>
-                                <img src={''} alt="profile image"/>
+                        <div className="modal-body d-flex main-section">
+                            <div className="profile-image">
+                                <img src={''} alt="profile image" className="image-box"/>
                             </div>
-                            <form className='flex-fill'>
+                            <form className="flex-fill form-text">
                                 <div className="mb-3 flex-fill">
                                     <label htmlFor="message-text" className="col-form-label"></label>
                                     <textarea className="form-control" id="message-text" placeholder='Type your Message here'></textarea>
