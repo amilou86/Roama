@@ -8,7 +8,7 @@ import * as bootstrap from "bootstrap";
 function App() {
   const [count, setCount] = useState(0);
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <div className="col-lg-3">
           <Search />
