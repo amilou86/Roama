@@ -1,9 +1,9 @@
 import React from 'react';
-import './scroll.css';
+import './friendList.css';
 
 
 
-export default function Scroll() {
+export default function FriendList() {
     return (
         <div>index</div>
     )
