@@ -1,12 +1,16 @@
 import React from 'react';
 import './scroll.css';
+import Feed from "./Feed";
 
 
 
-const Scroll = () => {
+export default function Scroll() {
     return (
-        <div>index</div>
+        <>
+            <Feed 
+            post="My First Post"
+            />
+        </>
     )
 }
 
-export default Scroll
