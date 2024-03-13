@@ -3,10 +3,9 @@ import './scroll.css';
 
 
 
-const Scroll = () => {
+export default function Scroll() {
     return (
         <div>index</div>
     )
 }
 
-export default Scroll
