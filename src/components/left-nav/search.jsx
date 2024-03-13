@@ -5,7 +5,6 @@ import logo from "../../../public/"
 function Search(){
     return (
         <div>
-
             <div className="left-nav">
                 <img src=""></img>
                 <form className="search-container">
@@ -13,6 +12,7 @@ function Search(){
                     <input placeholder="Search" className="leftnav-search" type="search"></input>
                 </form>
             </div>
+            <input placeholder="search" className="leftnav-search" type="search"></input>
         </div>
         
     )

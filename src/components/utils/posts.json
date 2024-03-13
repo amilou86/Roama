@@ -1,0 +1,42 @@
+[
+    {
+        "image":"../../public/person_2.jpeg",
+        "name": "Ami Edwards",
+        "location": "Manchester",
+        "restaurant": "burger king",
+        "hotel": "Hilton",
+        "bar": "The black prince"
+    },
+    {
+        "image":"../../public/person_1.jpeg",
+        "name": "Taha Lakehal",
+        "location": "London",
+        "restaurant": "McDonald's",
+        "hotel": "Sheraton",
+        "bar": ""
+    },
+    {
+        "image":"../../public/person_4.jpeg",
+        "name": "Andrew Sinkinson",
+        "location": "Leeds",
+        "restaurant": "Istanbul",
+        "hotel": "Holiday Inn",
+        "bar": "The black arrow"
+    },
+    {
+        "image":"../../public/person_3.jpeg",
+        "name": "Shalini Sunkuru",
+        "location": "New Castle",
+        "restaurant": "KFC",
+        "hotel": "Marriot",
+        "bar": "The prince"
+    },
+    {
+        "image":"../../public/person_5.jpeg",
+        "name": "Kowk Law",
+        "location": "Manchester",
+        "restaurant": "Pizza Hut",
+        "hotel": "Woldorf Victoria",
+        "bar": "Henry VIII"
+    }
+]
