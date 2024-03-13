@@ -1,10 +1,16 @@
-import "./App.css";
+
+
+
+
+
+import FriendList from './components/FriendList/friendList'
 import { useState } from "react";
 import Scroll from "./components/Scroll/scroll.jsx";
 import "./App.css";
 import Search from "./components/left-nav/search";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrap from 'bootstrap';
+
 
 function App() {
   const [count, setCount] = useState(0);
