@@ -16,6 +16,7 @@ function App() {
           <Scroll />
         </div>
         <div className="col-lg-3">posts</div>
+        <div className="col-lg-3">posts</div>
       </div>
     </div>
   );
