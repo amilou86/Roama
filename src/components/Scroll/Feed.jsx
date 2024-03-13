@@ -2,7 +2,6 @@ import React from "react";
 
 export default function Feed({ post }) {
   return (
-    <div className="row">
       <div className="card text-center">
         <div className="card-body">
           <p className="card-text">{post}</p>
@@ -10,7 +9,6 @@ export default function Feed({ post }) {
             Translate
           </a>
         </div>
-      </div>
     </div>
   );
 }

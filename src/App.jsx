@@ -1,7 +1,5 @@
-import "./App.css";
 import { useState } from "react";
-import Scroll from "./components/Scroll/Scroll.jsx";
-import "./App.css";
+import Scroll from "./components/Scroll/Scroll";
 
 import Search from "./components/left-nav/search";
 import "bootstrap/dist/css/bootstrap.min.css";
