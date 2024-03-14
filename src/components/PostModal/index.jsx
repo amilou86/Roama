@@ -1,3 +1,4 @@
+import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 
@@ -16,8 +17,8 @@ export default function Post() {
                             <h1 className="modal-title fs-5" id="post">Post a Roama</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                         </div>
-                        <div className="modal-body d-flex main-section">
-                            <div className="profile-image">
+                        <div className="modal-body d-flex align-items-center main-section">
+                            <div className="profile-image pe-3">
                                 <img src={''} alt="profile image" className="image-box"/>
                             </div>
                             <form className="flex-fill form-text">
