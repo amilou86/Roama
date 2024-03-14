@@ -1,8 +1,10 @@
-.post-btn {
+.post-btn,
+.init-post {
   padding: 6px 18px;
 }
 
-.footer-btn button {
+.footer-btn,
+.main-post-init button {
   border-radius: 30px;
 }
 
