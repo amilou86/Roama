@@ -13,10 +13,10 @@ export default function Login(){
                     <div className="form-group w-100">
                         <input type="password" className="form-control" id="password" placeholder="Password" />
                     </div>
-                    <small className="form-text">
+                    <small className="form-text mb-3">
                         <a href="#">Forgot Password?</a>
                     </small>
-                    <button type="submit" className="btn signBtn mt-3 w-100 rounded">Log in</button>   
+                    <button type="submit" className="btn signBtn mt-3 w-100 rounded border-0">Log in</button>   
                     <hr className="mt-4 w-100"/>
 
                     <div className="mb-3">
