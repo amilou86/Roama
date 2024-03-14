@@ -80,11 +80,7 @@ export default function Post() {
               </div>
             </div>
             <div className="modal-footer footer-btn">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                 Close
               </button>
               <button type="button" className="btn btn-primary post-btn ">
