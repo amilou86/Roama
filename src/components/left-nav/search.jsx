@@ -10,13 +10,11 @@ function Search(){
                 <div className="logo-container">
                     <img className="logo" src={logo}></img>
                 </div>
-                <img src="/roama-logo.png"></img>
                 <form className="search-container">
                     <span className="search-icon"><IoSearch /></span>
                     <input placeholder="Search" className="leftnav-search" type="search"></input>
                 </form>
             </div>
-            <input placeholder="search" className="leftnav-search" type="search"></input>
         </>
         
     )
