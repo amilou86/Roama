@@ -1,27 +1,27 @@
     [
         {
             "friendName": "Ami Edwards",
-            "profilePic": "../../public/person_2.jpeg",
+            "profilePic": "/person_2.jpeg",
             "online": "true"
         },
         {
             "friendName": "Taha Lakehal",
-            "profilePic": "../../public/person_1.jpeg",
+            "profilePic": "/person_1.jpeg",
             "online": "false"
         },
         {
             "friendName": "Andrew Sinkinson",
-            "profilePic": "../../public/person_3.jpeg",
+            "profilePic": "/person_3.jpeg",
             "online": "true"
         },
         {
             "friendName": "Shalini Sunkuru",
-            "profilePic": "../../public/person_4.jpeg",
+            "profilePic": "/person_4.jpeg",
             "online": "true"
         },
         {
             "friendName": "Kowk Law",
-            "profilePic": "../../public/person_5.jpeg",
+            "profilePic": "/person_5.jpeg",
             "online": "false"
         }
     ]
