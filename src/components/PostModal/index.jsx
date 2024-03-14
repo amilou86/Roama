@@ -1,0 +1,64 @@
+import React from 'react'
+import { AiOutlinePicture } from "react-icons/ai";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css'
+import { useState, useRef } from "react";
+
+
+export default function Post() {
+    const inputRef = useRef(null)
+    const [ image, setImage ] = useState ();
+
+    const handleClick = () => {
+        inputRef.current.click();
+    }
+   
+    const handleFileChange = (event) => {
+        setImage(URL.createObjectURL(event.target.files[0]))
+    }
+
+    return (
+        <div>     
+            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#post">
+            Post
+            </button>
+        
+
+            <div className="modal fade " id="post" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="post">Post a Roama</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                        </div>
+                        <div className="modal-body d-flex align-items-center main-section">
+                            <div className="profile-image pe-3">
+                                <img src={''} alt="profile image" className="image-box"/>
+                            </div>
+                            <form className="flex-fill form-text">
+                                <div className="mb-3 flex-fill">
+                                    <label htmlFor="message-text" className="col-form-label"></label>
+                                    <textarea className="form-control input-area" id="message-text" placeholder='Type your Message here'></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div className="row p-4">
+                            <img src={image} />
+                        </div>
+                        <div className="d-flex post-options">
+                            <div className="img-upload">
+                                <input ref={inputRef} style={{display: "none"}} type="file" onChange={handleFileChange} />
+                                <AiOutlinePicture onClick={handleClick} />
+                                <p>Upload Image</p>
+                            </div>
+                        </div>
+                        <div className="modal-footer footer-btn">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary post-btn ">Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    )
+}
