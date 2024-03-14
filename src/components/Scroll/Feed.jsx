@@ -3,7 +3,7 @@ import Timestamp from "react-timestamp";
 
 import "./scroll.css";
 
-export default function Feed({ post }) {
+export default function Feed({ username, postImage, profilePicture, post }) {
   let currentTime = new Date();
   let postTime = currentTime;
   return (
@@ -11,10 +11,10 @@ export default function Feed({ post }) {
       <header>
         <div className="user">
           <div className="profile-picture">
-            <img src="/person_1.jpeg" alt="Abdalla" />
+            <img src={profilePicture} alt={username} />
           </div>
           <div className="user-nickname">
-            <span>Abdalla Diaai</span>
+            <span>{username}</span>
           </div>
           <div className="user-nickname">
             <span>
@@ -26,11 +26,11 @@ export default function Feed({ post }) {
 
       <div className="post-image">
         <div className="post-image-bg">
-          <img alt="Planet Earth" src="/earth.jpg" />
+          <img alt={postImage} src={postImage} />
         </div>
       </div>
       <div className="post-caption">
-        <strong>John D. Veloper </strong> {post}
+        <strong>{username} </strong> {post}
       </div>
     </article>
   );
