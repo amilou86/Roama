@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "phrase": "Hello",
+        "translation": ""
+    },
+    {
+        "id": 2,
+        "phrase": "Goodbye",
+        "translation": ""        
+    },
+    {
+        "id": 3,
+        "phrase": "Yes",
+        "translation": ""
+        },
+    {
+        "id": 4,
+        "phrase": "No",
+        "translation": ""
+    },
+    {
+        "id": 5,
+        "phrase": "Excuse Me",
+        "translation": ""
+    },    
+    {
+        "id": 6,
+        "phrase": "Please",
+        "translation": ""
+    },
+    {
+        "id": 7,
+        "phrase": "Thank You",
+        "translation": ""
+    },
+    {
+        "id": 8,
+        "phrase": "You're Welcome",
+        "translation": ""
+    }
+]
