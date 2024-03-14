@@ -4,7 +4,8 @@ import Scroll from "./components/Scroll/scroll.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as bootstrap from "bootstrap";
 import Post from "./components/PostModal";
-import React, { useEffect } from 'react';
+import RightNav from "./components/right-nav/index.jsx";
+// import React, { useEffect } from 'react';
 // import { translateText } from './components/utils/api.js';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Scroll />
         </div>
         <div className="col-lg-3">
+          <RightNav />
           <Post />
         </div>
       </div>
