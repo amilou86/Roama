@@ -1,0 +1,48 @@
+.signForm{
+    width: 90vw;
+   
+}
+
+.signPage{
+    background-image: linear-gradient(to bottom right, #04F59B, #5FE0DD, #04DABA, #04D4C4, #2FC8E5);
+}
+
+.signBtn{
+    background-image: linear-gradient(to right, #04B7E5, #2FC8E5, #5FE0DD, #90EAE7) ;
+}
+
+a{
+    color:#04B7E5 !important;
+}
+
+a:hover{
+    color: #04DABA !important; 
+}
+@media only screen and (min-width: 576px){
+    .signForm{
+        width: 75vw;
+    
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .signForm{
+        width: 50vw;
+   
+    }
+}
+
+
+@media only screen and (min-width: 992px){
+    .signForm{
+        width: 30vw;
+       
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .signForm{
+        width: 25vw;
+  
+    }
+}
