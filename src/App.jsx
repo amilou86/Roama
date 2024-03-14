@@ -1,8 +1,9 @@
-import Search from "./components/left-nav/search";
-import FriendList from "./components/FriendList/friendList.jsx";
+import Search from "./components/left-nav/search"
+import Messages from "./components/left-nav/messages.jsx";
 import Scroll from "./components/Scroll/scroll.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-import * as bootstrap from "bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import * as bootstrap from 'bootstrap';
+import FriendList from "./components/FriendList/friendList.jsx";
 import Post from "./components/PostModal";
 import RightNav from "./components/right-nav/index.jsx";
 // import React, { useEffect } from 'react';
@@ -21,6 +22,7 @@ function App() {
       <div className="row">
         <div className="col-lg-3">
           <Search />
+          <Messages />
         </div>
         <div className="col-lg-6">
           <Scroll />
