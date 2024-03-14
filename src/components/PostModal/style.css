@@ -2,3 +2,10 @@
   padding: 6px 18px;
 }
 
+.footer-btn button {
+  border-radius: 30px;
+}
+
+.input-area {
+  background-color: rgba(238, 238, 238, 0.377);
+}
