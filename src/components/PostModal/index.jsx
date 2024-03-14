@@ -8,9 +8,7 @@ export default function Post() {
   const inputRef = useRef(null);
   const [images, setImages] = useState([]);
 
-  const handleClick = () => {
-    inputRef.current.click();
-  };
+  const handleClick = () => inputRef.current.click();
 
   const handleFileChange = (event) => {
     const files = event.target.files;
@@ -28,8 +26,8 @@ export default function Post() {
         ]);
       }
     }
-    // setImage(URL.createObjectURL(event.target.files[0]))
   };
+
   const deleteImage = (index) => {
     setImages((prevImages) => prevImages.filter((_, i) => i != index)
     );
@@ -65,7 +63,7 @@ export default function Post() {
                 </div>
               </form>
             </div>
-            <div className="row p-4">
+            <div className="row p-4 container">
               {images.map((images, index) => (
                 <div className="image" key={index}>
                   <span className="delete" onClick={() => deleteImage(index)}>
