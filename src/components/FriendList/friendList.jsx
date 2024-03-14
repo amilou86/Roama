@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import './friendList.css';
 import './friendCards.jsx';
 
