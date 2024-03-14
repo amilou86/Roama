@@ -11,36 +11,51 @@ body{
     height: 100vw;
 }
 
+.logo{
+    position: absolute;
+    object-fit: contain;
+    width: 260px;
+    margin-top: 10px;
+}
+
+.logo-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .left-nav{
-    width: 600px;
-    height: 100vh;
+    width: 100%;
+    height: 200px;
     background-color: rgb(255, 255, 255);
-    border-right: 1px solid black;
 }
 
 .leftnav-search{
     position: relative;
-    top: 14vh;
-    background-color: rgba(179, 179, 179, 0.8);
+    top: 130px;
+    margin-left: 9%;
+    background-color: rgba(212, 212, 212, 0.8);
     font-size: 18px;
     padding:  6px 10px;
-    padding-left: 50px;
+    padding-left: 60px;
     border-radius: 12px;
     border-width: 0px;
-    width: 400px;
+    width: 80%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     outline: none;
     cursor: pointer;
+    color: rgb(68, 68, 68);
 }
 
 .search-icon{
     position: absolute;
-    top: 14vh;
+    top: 130px;
+    left: 3vw;
     font-size: 23px;
     margin-left: 8px;
-    border-right: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(90, 90, 90);
     height: 38px;
-    width: 34px;
-    color: white;
+    width: 30px;
+    color: rgb(85, 85, 85);
     z-index: 1;
 }
