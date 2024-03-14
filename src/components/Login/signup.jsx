@@ -11,16 +11,16 @@ export default function Signup(){
                     <input type="text" className="form-control col-6" id="lastname" placeholder="Last name" />
                 </div>
                 <div className="form-group mb-3 w-100">
-                    <input type="text" className="form-control" id="username" placeholder="Username" />
+                    <input type="text" className="form-control" placeholder="Username" />
                 </div>
                 <div className="form-group mb-3 w-100">
-                    <input type="email" className="form-control" id="username" placeholder="Email" />
+                    <input type="email" className="form-control" placeholder="Email" />
                 </div>
                 <div className="form-group mb-3 w-100">
-                    <input type="password" className="form-control" id="password" placeholder="Password" />
+                    <input type="password" className="form-control" placeholder="Password" />
                 </div>
                 <div className="form-group mb-3 w-100">
-                    <input type="password" className="form-control" id="password" placeholder="Confirm password" />
+                    <input type="password" className="form-control" placeholder="Confirm password" />
                 </div>
                 <button type="submit" className="btn signBtn mt-3 w-100 rounded border-0">Sign up</button>   
                 <hr className="mt-4 w-100"/>
