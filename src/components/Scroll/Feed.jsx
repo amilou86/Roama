@@ -18,7 +18,7 @@ export default function Feed({ post }) {
           </div>
           <div className="user-nickname">
             <span>
-            <Timestamp relative date={postTime} autoUpdate />
+              <Timestamp relative date={postTime} autoUpdate />
             </span>
           </div>
         </div>
