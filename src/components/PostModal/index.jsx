@@ -12,7 +12,6 @@ export default function Post() {
 
   const handleFileChange = (event) => {
     const files = event.target.files;
-    console.log(files);
     if (files.length === 0) return;
     for (let i = 0; i < files.length; i++) {
       if (files[i].type.split("/")[0] !== "image") continue;
