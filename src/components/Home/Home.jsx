@@ -1,6 +1,6 @@
 import Search from "../left-nav/Search";
 import Messages from "../left-nav/Messages";
-import Scroll from "../Scroll/Scroll";
+import Scroll from "../Middle-Section/Scroll";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as bootstrap from "bootstrap";
 import Post from "../PostModal/index";

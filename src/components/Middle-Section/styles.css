@@ -2,7 +2,7 @@
   border-radius: 3px;
   border: 1px solid #e6e6e6;
   background-color: #fff;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -32,7 +32,6 @@
 
 .post-image-bg {
   padding: 5px;
-
 }
 
 .post-image img {
@@ -41,7 +40,7 @@
 }
 
 .post-caption {
-  padding: 16px 16px;
+  padding: 15px 16px;
 }
 
 .post-caption strong {
@@ -49,3 +48,19 @@
   font-weight: bold;
 }
 
+.fa-regular {
+  margin-inline-end: 10px;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+  color: red;
+}
+
+.fa-comment:hover {
+  color: grey;
+}
+
+.comments {
+    margin: 5px 0 5px;
+}
