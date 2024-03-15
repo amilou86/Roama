@@ -2,7 +2,7 @@
   border-radius: 3px;
   border: 1px solid #e6e6e6;
   background-color: #fff;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -41,7 +41,7 @@
 }
 
 .post-caption {
-  padding: 16px 16px;
+  padding: 15px 16px;
 }
 
 .post-caption strong {
@@ -49,3 +49,10 @@
   font-weight: bold;
 }
 
+.fa-regular {
+    margin-inline-end: 10px;
+}
+
+.fa-heart:hover {
+    color: red;
+}

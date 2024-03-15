@@ -7,31 +7,34 @@ export default function Feed({ username, postImage, profilePicture, post }) {
   let currentTime = new Date();
   let postTime = currentTime;
   return (
-    <article className="post">
-      <header>
-        <div className="user">
-          <div className="profile-picture">
-            <img src={profilePicture} alt={username} />
+      <article className="post">
+        <header>
+          <div className="user">
+            <div className="profile-picture">
+              <img src={profilePicture} alt={username} />
+            </div>
+            <div className="user-nickname">
+              <span>{username}</span>
+            </div>
+            <div className="user-nickname">
+              <span>
+                <Timestamp relative date={postTime} autoUpdate />
+              </span>
+            </div>
           </div>
-          <div className="user-nickname">
-            <span>{username}</span>
-          </div>
-          <div className="user-nickname">
-            <span>
-              <Timestamp relative date={postTime} autoUpdate />
-            </span>
+        </header>
+        <div className="post-image">
+          <div className="post-image-bg">
+            <img alt={postImage} src={postImage} />
           </div>
         </div>
-      </header>
-
-      <div className="post-image">
-        <div className="post-image-bg">
-          <img alt={postImage} src={postImage} />
+        <div className="post-caption">
+        <div>
+          <i className="fa-regular fa-comment"></i>
+          <i className="fa-regular fa-heart"></i>
         </div>
-      </div>
-      <div className="post-caption">
-        <strong>{username} </strong> {post}
-      </div>
-    </article>
+          {post}
+        </div>
+      </article>
   );
 }
