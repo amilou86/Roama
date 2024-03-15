@@ -60,3 +60,7 @@
 .fa-comment:hover {
     color: grey;
   }
+
+#comment {
+    position: fixed;
+}
