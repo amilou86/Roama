@@ -32,7 +32,6 @@
 
 .post-image-bg {
   padding: 5px;
-
 }
 
 .post-image img {
@@ -50,9 +49,14 @@
 }
 
 .fa-regular {
-    margin-inline-end: 10px;
+  margin-inline-end: 10px;
+  cursor: pointer;
 }
 
 .fa-heart:hover {
-    color: red;
+  color: red;
 }
+
+.fa-comment:hover {
+    color: grey;
+  }
