@@ -1,9 +1,8 @@
-import react from 'react'
 
-export default function Pagination({ postPerPage, totalPosts, paginate }) {
+export default function Pagination({ postsPerPage, totalPosts, paginate }) {
     const pageNumbers = [];
 
-    for (let i = 1; i <= Math.ceil(totalPost / postsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
         pageNumbers.push(i);
     }
 
