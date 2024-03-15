@@ -13,9 +13,7 @@ export default function Collapsible({ comment }) {
         {comment.length} {isExpanded ? "Comments" : "Comments"}
       </div>
       <div {...getCollapseProps()}>
-        <div className="content">
-          {comment}
-        </div>
+        <div className="content">{comment}</div>
       </div>
     </div>
   );

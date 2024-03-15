@@ -1,12 +1,23 @@
-import React from "react";
-import "./styles.css";
+import React, { useEffect, useRef, useState } from "react";
 import Feed from "./Feed";
+import Post from "./Post";
 import posts from "../utils/random-posts.json";
-import Collapsible from "./Collapsible";
 export default function Scroll() {
+  const [posts, setPosts] = useState(null);
+  useEffect(() => {
+    fetch("http://localhost:8000/posts")
+      .then((result) => {
+        return result.json();
+      })
+      .then((data) => {
+        setPosts(data);
+        console.log(data);
+      });
+  }, []);
   return (
-    <>
-      {posts.map((post, index) => (
+    <div id="main-section">
+      <Post />
+      {posts && posts.map((post, index) => (
         <Feed
           key={index}
           username={post.username}
@@ -15,6 +26,6 @@ export default function Scroll() {
           post={post.post}
         />
       ))}
-    </>
+    </div>
   );
 }

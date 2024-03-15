@@ -3,14 +3,13 @@ import Timestamp from "react-timestamp";
 import "./styles.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { Blockquote } from "flowbite-react";
 import Collapsible from "./Collapsible";
 
 export default function Feed({ username, postImage, profilePicture, post }) {
   const inputRef = useRef();
   const [postComments, setPostComments] = useState([]);
 
-  const [comment, setComment] = useState("");
+  //   const [comment, setComment] = useState("");
   // timestamp of post
   let currentTime = new Date();
   let postTime = currentTime;
@@ -21,28 +20,24 @@ export default function Feed({ username, postImage, profilePicture, post }) {
     event.preventDefault();
     setLikes(likes + 1);
   };
-  //   modal
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = (event) => {
-    event.preventDefault();
-    setShow(true);
-  };
-  // handle input of modal
-  const handleInputChange = (event) => {
-    // Getting the value and name of the input which triggered the change
-    const { name, value } = event.target;
-    // Updating the input's state
-    setComment(comment, value);
-  };
-
-  // modal submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    setPostComments([...postComments, inputRef.current.value]);
-    handleClose();
-  };
 
+    if (inputRef.current.value.length > 0) {
+      setPostComments([...postComments, inputRef.current.value]);
+      toggle();
+    } else {
+      // to handle empty field
+      return;
+    }
+  };
+  const [isOpen, setIsOpen] = useState(false);
+  function toggle(event) {
+    if (event) {
+      event.preventDefault(); // Prevent the default behavior (scrolling)
+    }
+    setIsOpen((isOpen) => !isOpen);
+  }
   return (
     <article className="post">
       <header>
@@ -67,7 +62,7 @@ export default function Feed({ username, postImage, profilePicture, post }) {
       </div>
       <div className="post-caption">
         <div>
-          <a href="#" onClick={handleShow}>
+          <a href="#" onClick={toggle}>
             <i className="fa-regular fa-comment"></i>
           </a>
           <a onClick={handleLikes} href="#">
@@ -76,39 +71,39 @@ export default function Feed({ username, postImage, profilePicture, post }) {
           {likes} Likes
         </div>
         {post}
-        <Collapsible
-          comment={postComments.map((postComment, index) => (
-            <p className="comments" key={index}>
-              {postComment}
-            </p>
-          ))}
-        />
+        <div>
+          <Collapsible
+            comment={postComments.map((postComment, index) => (
+              <p className="comments" key={index}>
+                {postComment}
+              </p>
+            ))}
+          />
+        </div>
       </div>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>New Post</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+      {isOpen && (
+        <div id="comment-form">
+          {" "}
           <input
             className="form-control"
             name="comment"
             ref={inputRef}
             type="text"
-            onClick={handleInputChange}
-            placeholder="What do you want to talk about?"
+            placeholder="Add a comment..."
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                handleSubmit(event);
+              }
+            }}
           ></input>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" size="sm" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" size="sm" onClick={handleSubmit}>
-            Post
-          </Button>
-        </Modal.Footer>
-      </Modal>
+          {/* <div id="comment-btn">
+            {" "}
+            <a href="#" onClick={handleSubmit}>
+              <i className="fa-regular fa-comment"></i>
+            </a>
+          </div> */}
+        </div>
+      )}
     </article>
   );
 }
-34;
