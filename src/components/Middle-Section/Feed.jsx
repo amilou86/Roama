@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Timestamp from "react-timestamp";
-import "./scroll.css";
+import "./styles.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { Blockquote } from "flowbite-react";
