@@ -1,8 +1,8 @@
 import React from "react";
-import "./scroll.css";
+import "./styles.css";
 import Feed from "./Feed";
 import posts from "../utils/random-posts.json";
-
+import Collapsible from "./Collapsible";
 export default function Scroll() {
   return (
     <>

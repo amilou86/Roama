@@ -58,9 +58,9 @@
 }
 
 .fa-comment:hover {
-    color: grey;
-  }
+  color: grey;
+}
 
-#comment {
-    position: fixed;
+.comments {
+    margin: 5px 0 5px;
 }
