@@ -8,13 +8,10 @@ export default function Post() {
   const inputRef = useRef(null);
   const [images, setImages] = useState([]);
 
-  const handleClick = () => {
-    inputRef.current.click();
-  };
+  const handleClick = () => inputRef.current.click();
 
   const handleFileChange = (event) => {
     const files = event.target.files;
-    console.log(files);
     if (files.length === 0) return;
     for (let i = 0; i < files.length; i++) {
       if (files[i].type.split("/")[0] !== "image") continue;
@@ -28,8 +25,8 @@ export default function Post() {
         ]);
       }
     }
-    // setImage(URL.createObjectURL(event.target.files[0]))
   };
+
   const deleteImage = (index) => {
     setImages((prevImages) => prevImages.filter((_, i) => i != index)
     );
@@ -65,7 +62,7 @@ export default function Post() {
                 </div>
               </form>
             </div>
-            <div className="row p-4">
+            <div className="row p-4 container">
               {images.map((images, index) => (
                 <div className="image" key={index}>
                   <span className="delete" onClick={() => deleteImage(index)}>
@@ -83,11 +80,7 @@ export default function Post() {
               </div>
             </div>
             <div className="modal-footer footer-btn">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                 Close
               </button>
               <button type="button" className="btn btn-primary post-btn ">
