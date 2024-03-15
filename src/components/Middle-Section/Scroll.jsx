@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import Pagination from "../Pagination/Pagination"
+import "./styles.css";
 import Feed from "./Feed";
 import Post from "./Post";
 import posts from "../utils/random-posts.json";
@@ -14,18 +16,31 @@ export default function Scroll() {
         console.log(data);
       });
   }, []);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 2;
+
+  // get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
-    <div id="main-section">
-      <Post />
-      {posts && posts.map((post, index) => (
-        <Feed
-          key={index}
-          username={post.username}
-          profilePicture={post.profilePicture}
-          postImage={post.postImage}
-          post={post.post}
-        />
-      ))}
+    <div>
+      <div>
+        {currentPosts.map((post, index) => (
+          <Feed
+            key={index}
+            username={post.username}
+            profilePicture={post.profilePicture}
+            postImage={post.postImage}
+            post={post.post}
+          />
+        ))}
+      </div>
+
+      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
     </div>
   );
 }
