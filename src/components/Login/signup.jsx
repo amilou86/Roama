@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Signup(){
 
@@ -102,7 +103,7 @@ export default function Signup(){
                 <div className="mb-3">
                     <small>
                         Already a Roama? 
-                            <a className="ms-2 " href="#">Log in </a>
+                            <Link to='/' className="ms-2 ">Log in </Link>
                     </small>
                 </div>
                         

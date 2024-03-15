@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './login.css';
+import { Link, useNavigate } from "react-router-dom";
 
 
 export default function Login(){
@@ -10,6 +11,8 @@ export default function Login(){
         password: '',
     });
     // const [errors, setErrors] = useState({});
+
+    const navigate = useNavigate();
     
     const handleInputChange = (event) => {
         //Get the value and name of field whose input changed
@@ -28,6 +31,7 @@ export default function Login(){
     const handleFormSubmit = (event) => {
         //prevent default behaiviour on form submit
         event.preventDefault();
+        navigate('/home');
         console.log(loginData);
     }
 
@@ -69,7 +73,7 @@ export default function Login(){
                 <div className="mb-3">
                     <small>
                         New to Roama? 
-                        <a className="ms-2 " href="#">Sign up</a>
+                        <Link to='/signup' className="ms-2 ">Sign up</Link>
                     </small>
                 </div>                    
             </form>
