@@ -26,8 +26,9 @@ export default function Scroll() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div id="main-section">
       <div>
+        <Post />
         {currentPosts.map((post, index) => (
           <Feed
             key={index}
