@@ -6,7 +6,7 @@ import * as bootstrap from "bootstrap";
 import Post from "../PostModal/index";
 import RightNav from "../right-nav/index";
 import FriendList from "../FriendList/friendList";
-import FriendCards from "../FriendCards/friendCards"
+import FriendCards from "../FriendCards/friendCards";
 
 // import React, { useEffect } from 'react';
 // import { translateText } from './components/utils/api.js';
