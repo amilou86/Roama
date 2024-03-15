@@ -17,7 +17,6 @@ export default function Home() {
         <div className="col-lg-3">
           <Search />
           <FriendList />
-          <FriendCards />
           <Messages />
         </div>
         <div className="col-lg-6">
