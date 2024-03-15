@@ -1,42 +1,46 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Timestamp from "react-timestamp";
 import "./scroll.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { Blockquote } from "flowbite-react";
+import Collapsible from "./Collapsible";
 
 export default function Feed({ username, postImage, profilePicture, post }) {
+  const inputRef = useRef();
+  const [postComments, setPostComments] = useState([]);
+
+  const [comment, setComment] = useState("");
+  // timestamp of post
   let currentTime = new Date();
   let postTime = currentTime;
+  //   state of likes
   const [likes, setLikes] = useState(0);
-  const [comment, setComment] = useState();
-  const handleInputChange = (event) => {
-    // Getting the value and name of the input which triggered the change
-    const { name, value } = event.target;
-    console.log(name);
-    console.log(value);
-
-    // Updating the input's state
-    setComment({
-      comment: value,
-    });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(comment);
-    handleClose();
-  };
-
+  //   like button
   const handleLikes = (event) => {
     event.preventDefault();
     setLikes(likes + 1);
   };
-
+  //   modal
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (event) => {
     event.preventDefault();
     setShow(true);
+  };
+  // handle input of modal
+  const handleInputChange = (event) => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+    // Updating the input's state
+    setComment(comment, value);
+  };
+
+  // modal submit
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setPostComments([...postComments, inputRef.current.value]);
+    handleClose();
   };
 
   return (
@@ -66,13 +70,21 @@ export default function Feed({ username, postImage, profilePicture, post }) {
           <a href="#" onClick={handleShow}>
             <i className="fa-regular fa-comment"></i>
           </a>
-          <a onClick={handleLikes} href="">
+          <a onClick={handleLikes} href="#">
             <i className="fa-regular fa-heart"></i>
           </a>
           {likes} Likes
         </div>
         {post}
+        <Collapsible
+          comment={postComments.map((postComment, index) => (
+            <p className="comments" key={index}>
+              {postComment}
+            </p>
+          ))}
+        />
       </div>
+
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>New Post</Modal.Title>
@@ -81,8 +93,9 @@ export default function Feed({ username, postImage, profilePicture, post }) {
           <input
             className="form-control"
             name="comment"
+            ref={inputRef}
             type="text"
-            onChange={handleInputChange}
+            onClick={handleInputChange}
             placeholder="What do you want to talk about?"
           ></input>
         </Modal.Body>
