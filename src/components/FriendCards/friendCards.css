@@ -1,8 +1,10 @@
 .friend-card {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid;
+    border: none;
+    border-radius: 3.5%;
     margin-bottom: 10px;
 }
 
@@ -13,6 +15,14 @@
     margin-right: 10px;
 }
 
-/* .friend-card h3 {
+.friend-card h3 {
+    font-family: "Raleway Dots", sans-serif;
+    color: #04B7E5;
+    font-weight: 600;
+}
 
-} */
+.container h2 {
+    font-family: "Raleway Dots", sans-serif;
+    color: #04B7E5;
+    font-weight: 900;
+}
