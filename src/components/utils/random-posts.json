@@ -1,0 +1,62 @@
+[
+  {
+    "username": "Mohamed Salah",
+    "profilePicture": "/profile-pics/person_1.jpeg",
+    "postImage": "/post-images/liverpool.jpg",
+    "post": "Welcome to Roama!"
+  },
+  {
+    "username": "Alex Ferguson",
+    "profilePicture": "/profile-pics/person_2.jpeg",
+    "postImage": "/post-images/manu.jpg",
+    "post": "What do you think Roama is about?"
+  },
+  {
+    "username": "Chris Gardner",
+    "profilePicture": "/profile-pics/person_3.jpeg",
+    "postImage": "/post-images/sf.jpg",
+    "post": "Welcome to San Francisco"
+  },
+  {
+    "username": "Elon Musk",
+    "profilePicture": "/profile-pics/person_4.jpeg",
+    "postImage": "/post-images/earth.jpg",
+    "post": "Do you still think the earth is flat!!"
+  },
+  {
+    "username": "Boris Johnson",
+    "profilePicture": "/profile-pics/person_5.jpeg",
+    "postImage": "/post-images/london.jpg",
+    "post": "Metropoletan city!"
+  },
+  {
+    "username": "Hosni Mubarak",
+    "profilePicture": "/profile-pics/person_2.jpeg",
+    "postImage": "/post-images/cairo.jpg",
+    "post": "The land of the Pharoahs."
+  },
+  {
+    "username": "Jung",
+    "profilePicture": "/profile-pics/person_1.jpeg",
+    "postImage": "/post-images/coding.png",
+    "post": "Let us code?"
+  },
+  {
+    "username": "Antonio Banderas",
+    "profilePicture": "/profile-pics/person_2.jpeg",
+    "postImage": "/post-images/andalucia.jpg",
+    "post": "Beautiful Andalucia!"
+  },
+  {
+    "username": "Harvey Spectar",
+    "profilePicture": "/profile-pics/person_3.jpeg",
+    "postImage": "/post-images/nyc.jpg",
+    "post": "The city that never sleeps!"
+  },
+  {
+    "username": "Jacinda Ardern",
+    "profilePicture": "/profile-pics/person_4.jpeg",
+    "postImage": "/post-images/nz.jpg",
+    "post": "Welcome to kiwi land!"
+  }
+]

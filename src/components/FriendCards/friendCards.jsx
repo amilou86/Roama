@@ -3,7 +3,6 @@ import "./friendCards.css"
 
 export default function FriendCards({ friendName, profilePic, online }) {
     // const { friendName, profilePic, online } = friend
-    console.log(friendName)
     return (
         <div className="friend-card">
             <img src={profilePic} alt={friendName} />

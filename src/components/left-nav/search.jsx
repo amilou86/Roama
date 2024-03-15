@@ -1,6 +1,6 @@
 import './search.css'
 import { IoSearch } from "react-icons/io5";
-import logo from "../../../public/roama-logo.png"
+import logo from "/roama-logo.png"
 
 
 function Search(){
