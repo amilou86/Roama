@@ -1,14 +1,14 @@
+import React from "react";
 import Search from "../left-nav/Search";
 import Messages from "../left-nav/Messages";
 import Scroll from "../Middle-Section/Scroll";
-import "bootstrap/dist/css/bootstrap.min.css";
-import * as bootstrap from "bootstrap";
 import Post from "../PostModal/index";
 import RightNav from "../right-nav/index";
 import FriendList from "../FriendList/friendList";
 import FriendCards from "../FriendCards/friendCards";
+import "bootstrap/dist/css/bootstrap.min.css";
+import * as bootstrap from "bootstrap";
 
-// import React, { useEffect } from 'react';
 // import { translateText } from './components/utils/api.js';
 export default function Home() {
   return (

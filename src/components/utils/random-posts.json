@@ -76,6 +76,13 @@
       "profilePicture": "https://www.thispersondoesnotexist.com",
       "postImage": "https://www.pexels.com/photo/photo-of-beige-dome-building-during-daytime-2079666/",
       "post": "First post using form."
+    },
+    {
+      "id": "296c",
+      "username": "Abdalla",
+      "profilePicture": "",
+      "postImage": "",
+      "post": "hello"
     }
   ]
 }
