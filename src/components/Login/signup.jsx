@@ -12,7 +12,7 @@ export default function Signup(){
     } = useForm({mode: 'onChange'});
 
     const onSubmit = (signupData) => {
-        console.log(signupData);
+        // console.log(signupData);
 
         //save user to local storage on successful signup
         let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));

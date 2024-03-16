@@ -3,7 +3,7 @@ import './login.css';
 import { Link, useNavigate } from "react-router-dom";
 
 
-export default function Login(){
+export default function Login(props){
 
     //Set initial state for login form
     const [loginData, setLoginData] = useState({
@@ -32,12 +32,28 @@ export default function Login(){
         //prevent default behaiviour on form submit
         event.preventDefault();
         navigate('/home');
-        console.log(loginData);
+        props.setUserData({
+            username: loginData.username,
+            firstname: loginData.firstname,
+            lastname: loginData.lastname,
+            email: loginData.email
+        })
+        // console.log(loginData);
         //check user exists in list of signed up users
         // const listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+        // console.log(listOfUsers);
         // if(listOfUsers !== null){
-        //     const loggedInUser = listOfUsers.filter(user => user.username === loginData.username && user.password1 === loginData.password);
+            
+        //     const loggedInUser = listOfUsers.filter(user => user.username === loginData.username);
+            
         //     if(loggedInUser.length === 1){
+        //         // console.log(loggedInUser)
+        //         props.setUserData({
+        //             username: loggedInUser[0].username,
+        //             firstname: loggedInUser[0].firstname,
+        //             lastname: loggedInUser[0].lastname,
+        //             email: loggedInUser[0].email
+        //         })
         //         navigate('/home');
         //     }else {
         //         alert("Incorrect login details!");
