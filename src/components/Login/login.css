@@ -6,12 +6,13 @@
 .signPage{
     background-image: linear-gradient(to bottom right, #04F59B, #5FE0DD, #04DABA, #04D4C4, #2FC8E5);
 }
-
-#firstname{
-    width: 48% ;
+.errorMsg{
+    font-size: smaller;
+    color: rgb(230, 108, 15);    
+    
 }
-#lastname{
-    width: 48%;
+.form-control{
+    margin-block-end: 0;
 }
 .signBtn{
     background-image: linear-gradient(to right, #04B7E5, #2FC8E5, #5FE0DD, #90EAE7) ;
