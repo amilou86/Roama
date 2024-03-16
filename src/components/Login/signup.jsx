@@ -13,8 +13,16 @@ export default function Signup(){
 
     const onSubmit = (signupData) => {
         console.log(signupData);
-        
+
+        //add user details to local storage on successful signup
+        let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+        if(listOfUsers === null){
+            listOfUsers = [];
+        }
+        listOfUsers.push(signupData);
+        localStorage.setItem("usersRoama", JSON.stringify(listOfUsers));        
     }
+
     const password = watch("password1");
 
     return(
