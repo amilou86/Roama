@@ -1,14 +1,18 @@
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import React, { useState } from "react";
+import posts from "../utils/random-posts.json";
 import "./styles.css";
 
 export default function Post() {
-  const [posts, setPosts] = useState({
-    username: "",
-    profilePicture: "",
+  // state of new post
+  const [newpost, setNewPost] = useState({
+    id: posts.length,
+    username: "logged in",
+    profilePicture: "https://www.thispersondoesnotexist.com",
     postImage: "",
     post: "",
+    timestamp: new Date(),
   });
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -22,26 +26,43 @@ export default function Post() {
     // Getting the value and name of the input which triggered the change
     const { name, value } = event.target;
     // Updating the input's state
-    setPosts({ ...posts, [name]: value });
+    setNewPost({ ...newpost, [name]: value });
   };
+
+  //   fetching json data with json-server
+  //   const handleSubmit = (event) => {
+  //     event.preventDefault();
+  //     const { name, value } = event.target;
+  //     console.log(event.target);
+  //     fetch("http://localhost:8000/posts", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(posts),
+  //     }).then(() => {
+  //       return;
+  //     });
+  //     setPosts({ ...posts, [name]: value });
+  //     handleClose();
+  //   };
+
+  //   updating posts on the page
   const handleSubmit = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
-    console.log(event.target);
-    fetch("http://localhost:8000/posts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(posts),
-    }).then(() => {
-      return;
-    });
-    setPosts({ ...posts, [name]: value });
+    setNewPost({ ...newpost, [name]: value });
+    posts.unshift(newpost);
     handleClose();
   };
 
   return (
     <div>
-      <input id="post-prompt" className="form-control" type="text" placeholder="Start a post" onClick={handleShow} />
+      <input
+        id="post-prompt"
+        className="form-control"
+        type="text"
+        placeholder="Start a post"
+        onClick={handleShow}
+      />
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>New Post</Modal.Title>
@@ -50,14 +71,14 @@ export default function Post() {
           <input
             className="form-control"
             name="username"
-            type="text"
+            type="hidden"
             onChange={handleInputChange}
             placeholder="First Name"
           ></input>
           <input
             className="form-control"
             name="profilePicture"
-            type="text"
+            type="hidden"
             onChange={handleInputChange}
             placeholder="Profile Picture"
           ></input>
