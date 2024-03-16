@@ -1,37 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 export default function Signup(){
 
-    //set initial state
-    const [signupData, setSignupData ] = useState({
-        firstname: '',
-        lastname: '',
-        username: '',
-        email: '',
-        password1: '',
-        password2: ''
-    });
+    const {
+        register, 
+        handleSubmit, 
+        formState: { errors }, 
+    } = useForm();
 
-    const handleInputChange = (event) => {
-        let value = event.target.value;
-        const name = event.target.name;
-        setSignupData({
-            ...signupData,
-            [name]: value,
-        });
-        // console.log(signupData);
-    }
-
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
+    const onSubmit = (signupData) => {
         console.log(signupData);
+        
     }
 
     return(
         <div className="signPage d-flex bg-primary vh-100 justify-content-center align-items-center">
                     
-            <form className= "signForm p-3 bg-white rounded d-flex flex-column justify-content-center align-items-center" >
+            <form className= "signForm p-3 bg-white rounded d-flex flex-column justify-content-center align-items-center"
+                onSubmit={handleSubmit(onSubmit)} >
                 <img className="w-50 mb-3" src="/roama-logo.png" alt="Roama" />
                 <div className="form-group row d-flex justify-content-between mb-3 w-100">
                     <input 
@@ -40,8 +28,7 @@ export default function Signup(){
                         id="firstname" 
                         placeholder="First name"
                         name="firstname"
-                        value={signupData.firstname}
-                        onChange={handleInputChange}
+                        {...register("firstname")}
                     />
                     <input 
                         type="text" 
@@ -49,8 +36,7 @@ export default function Signup(){
                         id="lastname" 
                         placeholder="Last name"
                         name="lastname"
-                        value={signupData.lastname}
-                        onChange={handleInputChange}
+                        {...register("lastname")}
                     />
                 </div>
                 <div className="form-group mb-3 w-100">
@@ -59,8 +45,7 @@ export default function Signup(){
                         className="form-control" 
                         placeholder="Username"
                         name="username"
-                        value={signupData.username}
-                        onChange={handleInputChange}
+                        {...register("username")}
                     />
                 </div>
                 <div className="form-group mb-3 w-100">
@@ -69,8 +54,7 @@ export default function Signup(){
                         className="form-control" 
                         placeholder="Email"
                         name="email"
-                        value={signupData.email}
-                        onChange={handleInputChange}
+                        {...register("email")}
                     />
                 </div>
                 <div className="form-group mb-3 w-100">
@@ -79,8 +63,7 @@ export default function Signup(){
                         className="form-control" 
                         placeholder="Password"
                         name="password1"
-                        value={signupData.password1}
-                        onChange={handleInputChange}
+                        {...register("password1")}
                     />
                 </div>
                 <div className="form-group mb-3 w-100">
@@ -89,14 +72,12 @@ export default function Signup(){
                         className="form-control" 
                         placeholder="Confirm password"
                         name="password2"
-                        value={signupData.password2}
-                        onChange={handleInputChange}
+                        {...register("password2")}
                     />
                 </div>
                 <button 
                     type="submit" 
                     className="btn signBtn mt-3 w-100 rounded border-0"
-                    onClick={handleFormSubmit}
                 >Sign up
                 </button>   
                 <hr className="mt-4 w-100"/>
