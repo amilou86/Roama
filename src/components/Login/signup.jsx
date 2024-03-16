@@ -96,7 +96,7 @@ export default function Signup(){
                         placeholder="Password*"
                         name="password1"
                         {...register("password1", {
-                            required: true, 
+                            required: "Please enter a password", 
                             minLength:{
                                 value: 6,
                                 message: "Password should have at least 6 characters"
