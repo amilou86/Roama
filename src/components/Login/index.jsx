@@ -33,6 +33,18 @@ export default function Login(){
         event.preventDefault();
         navigate('/home');
         console.log(loginData);
+        //check user exists in list of signed up users
+        // const listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+        // if(listOfUsers !== null){
+        //     const loggedInUser = listOfUsers.filter(user => user.username === loginData.username && user.password1 === loginData.password);
+        //     if(loggedInUser.length === 1){
+        //         navigate('/home');
+        //     }else {
+        //         alert("Incorrect login details!");
+        //     }
+        // } else {
+        //     alert("Please sign up!")
+        // }
     }
 
 
