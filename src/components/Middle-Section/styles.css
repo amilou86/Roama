@@ -66,7 +66,7 @@
 }
 
 .form-control {
-  margin-block-end: 10px;
+  margin-block-end: 10px !important;
 }
 
 #post-prompt {
@@ -91,14 +91,29 @@
   background-color: #5fe0dd !important;
 }
 .a {
-    text-align: center;
+  text-align: center;
 }
 .a:hover {
   cursor: pointer !important;
 }
 
 #load-more {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  margin-block-start: 10% !important;
+  padding: 40px;
+}
+
+#form-container {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+#submit-btn {
+  text-align: center;
 }
