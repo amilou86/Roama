@@ -12,7 +12,15 @@ export default function Signup(){
     } = useForm({mode: 'onChange'});
 
     const onSubmit = (signupData) => {
-        console.log(signupData);
+        // console.log(signupData);
+
+        //save user to local storage on successful signup
+        let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+        if(listOfUsers === null){
+            listOfUsers = [];
+        }
+        listOfUsers.push(signupData);
+        localStorage.setItem("usersRoama", JSON.stringify(listOfUsers));
         
     }
     const password = watch("password1");
@@ -88,7 +96,7 @@ export default function Signup(){
                         placeholder="Password*"
                         name="password1"
                         {...register("password1", {
-                            required: true, 
+                            required: "Please enter a password", 
                             minLength:{
                                 value: 6,
                                 message: "Password should have at least 6 characters"
