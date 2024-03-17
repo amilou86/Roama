@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
+import './styles.css';
 
 export default function Logout() {
+    const navigate = useNavigate();
+
     const handleClick = (event) => {
         //prevent default behaiviour on form submit
         event.preventDefault();
-        navigate('/login');
-        console.log(loginData);
+        navigate('/');
     }
   return (
-    <Button variant="primary" size="sm" onClick={handleClick}>
-      Post
+    <Button id="logout" variant="primary" size="sm" onClick={handleClick}>
+      Logout
     </Button>
   );
 }
