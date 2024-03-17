@@ -57,7 +57,7 @@ export default function Login(props){
                 <img className="w-50 mb-3" src="/roama-logo.png" alt="Roama" />
                 <div className="input-group w-100">
                     <div className="input-group-prepend">
-                        <span className="input-group-text h-100" id="plane-lock">
+                        <span className="input-group-text h-100">
                             <FaUser  className="form-icon" />
                         </span>                       
                     </div>
@@ -76,7 +76,7 @@ export default function Login(props){
 
                 <div className="input-group mt-3 w-100">
                     <div className="input-group-prepend">
-                        <span className="input-group-text h-100" id="plane-lock">
+                        <span className="input-group-text h-100">
                             <IoBag className="form-icon" />
                         </span>
                         
@@ -87,7 +87,6 @@ export default function Login(props){
                         className="form-control" 
                         placeholder="Password*"
                         name="password"
-                        aria-describedby="plane-lock"
                         {...register("password", {
                             // required: "Please enter your password", 
                         })}
