@@ -103,7 +103,7 @@
   justify-content: center;
 }
 
-form {
+#new-post-form {
   margin-block-start: 10% !important;
   padding: 40px;
 }
@@ -117,3 +117,19 @@ form {
 #submit-btn {
   text-align: center;
 }
+
+#new-post-btn {
+  background-image: linear-gradient(
+    to right,
+    #04b7e5,
+    #2fc8e5,
+    #5fe0dd,
+    #90eae7
+  );
+  border: none;
+}
+
+#new-post-btn:hover {
+    color: black;
+}
+

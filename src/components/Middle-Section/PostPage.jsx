@@ -48,7 +48,7 @@ export default function Post() {
 
   return (
     <div id="form-container" className="container">
-      <form className="row" onSubmit={handleSubmit}>
+      <form id="new-post-form" className="row" onSubmit={handleSubmit}>
         <input
           className="form-control post-form"
           name="username"
@@ -78,7 +78,7 @@ export default function Post() {
           placeholder="What do you want to talk about?"
         ></textarea>
         <div id="submit-btn">
-          <Button type="submit" variant="primary" size="sm">
+          <Button id="new-post-btn" type="submit" size="sm">
             Post
           </Button>
         </div>
