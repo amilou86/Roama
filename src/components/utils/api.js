@@ -26,21 +26,21 @@ export async function fetchTranslations(fixedTexts) {
   
         try {
             // Log Request URL
-            console.log("Request URL:", url);
+            // console.log("Request URL:", url);
 
             // Log Request Options
-            console.log("Request Options:", options);
+            // console.log("Request Options:", options);
 
             // Fetch translation from the API
             const response = await fetch(url, options);
 
             // Log Response Status
-            console.log("Response Status:", response.status);
+            // console.log("Response Status:", response.status);
 
             const result = await response.json();
 
             // Log Translated Text
-            console.log("Translated Text:", result.translatedText);
+            // console.log("Translated Text:", result.translatedText);
 
             // Store translated text in the copied object
             translatedTextsCopy[text] = result.translatedText;
