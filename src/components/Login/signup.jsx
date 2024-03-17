@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { FaUser, FaEnvelope }  from "react-icons/fa6";
+import { IoBag, IoBagCheck } from "react-icons/io5";
 
 export default function Signup(){
 
@@ -33,10 +35,15 @@ export default function Signup(){
                 onSubmit={handleSubmit(onSubmit)} >
                 <img className="w-50 mb-3" src="/roama-logo.png" alt="Roama" />
                 <div className="form-group mb-3 d-flex justify-content-between gap-2 w-100">
-                    <div className="form-group"> 
+                    <div className="input-group name-box">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text h-100" id="plane-lock">
+                                <FaUser className="form-icon" />
+                            </span>                       
+                        </div>
                         <input 
                         type="text" 
-                        className="form-control" 
+                        className="form-control rounded-end" 
                         placeholder="First name*"
                         name="firstname"
                         {...register("firstname", {
@@ -44,35 +51,54 @@ export default function Signup(){
                         })}
                         />
                         {errors.firstname &&
-                            <small className="ms-1 errorMsg">{errors.firstname.message}</small>}
+                            <small className="ms-2 mb-0 errorMsg">{errors.firstname.message}</small>}
                     </div>
                     
-                    <div>
-                    <input 
+                    <div className="input-group name-box">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text h-100" id="plane-lock">
+                                <FaUser  className="form-icon" />
+                            </span>                       
+                        </div>
+                        <input 
                         type="text" 
-                        className="form-control" 
+                        className="form-control rounded-end" 
                         placeholder="Last name*"
                         name="lastname"
                         {...register("lastname", {
                             required: "Please enter last name"
                         })}
-                    />
-                    {errors.lastname && 
-                        <small className="ms-1 errorMsg">{errors.lastname.message}</small>}
+                        />
+                        {errors.lastname && 
+                            <small className="ms-2 mb-0 errorMsg">{errors.lastname.message}</small>}
                     </div>                    
                 </div>
 
-                <div className="form-group mb-3 w-100">
+                <div className="input-group w-100">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text h-100" id="plane-lock">
+                            <FaUser className="form-icon" />
+                        </span>                       
+                    </div>
                     <input 
                         type="text" 
                         className="form-control" 
-                        placeholder="Username"
+                        placeholder="Username*"
                         name="username"
-                        {...register("username")}
+                        {...register("username", {
+                            required: "Please enter username"
+                        })}
                     />
                 </div>
+                {errors.username && 
+                    <small className="ms-2 mb-0 errorMsg">{errors.username.message}</small>}
 
-                <div className="form-group mb-3 w-100">
+                <div className="input-group mt-3 w-100">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text h-100" id="plane-lock">
+                            <FaEnvelope className="form-icon" />
+                        </span>                       
+                    </div>
                     <input 
                         type="email" 
                         className="form-control" 
@@ -86,10 +112,16 @@ export default function Signup(){
                             }
                         })}
                     />
-                    {errors.email &&
-                        <small className="ms-1 errorMsg">{errors.email.message}</small>}
                 </div>
-                <div className="form-group mb-3 w-100">
+                {errors.email &&
+                        <small className=" mb-0 errorMsg">{errors.email.message}</small>}
+
+                <div className="input-group mt-3 w-100">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text h-100" id="plane-lock">
+                            <IoBag className="form-icon" />
+                        </span>                       
+                    </div>
                     <input 
                         type="password" 
                         className="form-control" 
@@ -103,28 +135,34 @@ export default function Signup(){
                             }
                         })}
                     />
-                    {errors.password1 &&
-                        <small className="ms-1 errorMsg">{errors.password1.message}</small>}
                 </div>
-                <div className="form-group mb-3 w-100">
+                {errors.password1 &&
+                        <small className=" mb-0 errorMsg">{errors.password1.message}</small>}
+
+                <div className="input-group mt-3 w-100">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text h-100" id="plane-lock">
+                            <IoBagCheck className="form-icon" />
+                        </span>                       
+                    </div>
                     <input 
                         type="password" 
                         className="form-control" 
                         placeholder="Confirm password*"
                         name="password2"
                         {...register("password2", { 
-                            required: true,
+                            required: "Please confirm password",
                             validate: (value) => 
-                                value === password || "Passwords should match"
-                            
+                                value === password || "Passwords should match"                            
                         })}
-                    />
-                    {errors.password2 && 
-                        <small className="ms-1 errorMsg">{errors.password2.message}</small>}       
+                    />     
                 </div>
+                {errors.password2 && 
+                        <small className=" mb-0 errorMsg">{errors.password2.message}</small>}
+
                 <button 
                     type="submit" 
-                    className="btn signBtn mt-3 w-100 rounded border-0"
+                    className="btn signBtn mt-4 w-100 rounded border-0"
                 >Sign up
                 </button>   
                 <hr className="mt-4 w-100"/>
@@ -133,13 +171,8 @@ export default function Signup(){
                         Already a Roama? 
                             <Link to='/' className="ms-2 ">Log in </Link>
                     </small>
-                </div>
-                        
-    
-            </form>
-    
+                </div>                            
+            </form>    
         </div>
-
-    )
-    
+    )    
 }
