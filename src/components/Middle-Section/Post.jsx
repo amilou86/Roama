@@ -29,22 +29,6 @@ export default function Post() {
     setNewPost({ ...newpost, [name]: value });
   };
 
-  //   fetching json data with json-server
-  //   const handleSubmit = (event) => {
-  //     event.preventDefault();
-  //     const { name, value } = event.target;
-  //     console.log(event.target);
-  //     fetch("http://localhost:8000/posts", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(posts),
-  //     }).then(() => {
-  //       return;
-  //     });
-  //     setPosts({ ...posts, [name]: value });
-  //     handleClose();
-  //   };
-
   //   updating posts on the page
   const handleSubmit = (event) => {
     event.preventDefault();
