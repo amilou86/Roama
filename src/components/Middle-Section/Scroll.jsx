@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Pagination from "../Pagination/Pagination";
 import "./styles.css";
@@ -30,6 +30,11 @@ export default function Scroll() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const button = document.getElementById("instant-top-button");
+  // to scroll to top
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [currentPage]);
 
   // pagination using load more anchor tag
 
@@ -59,12 +64,12 @@ export default function Scroll() {
         {/* navigating to post in a new page */}
 
         <input
-        id="post-prompt"
-        className="form-control"
-        type="text"
-        placeholder="Start a post"
-        onClick={postForm}
-      />
+          id="post-prompt"
+          className="form-control"
+          type="text"
+          placeholder="Start a post"
+          onClick={postForm}
+        />
 
         {/* load more posts */}
 
