@@ -7,11 +7,6 @@ import Post from "./components/Middle-Section/PostPage";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
-  // // useEffect to trigger translation on component mount
-  // useEffect(() => {
-  //   translateText();
-  //   // empty array ensures the useEffect runs once only on component mount
-  //   }, []);
   
   //initial state for user
   const [userData, setUserData] = useState({
@@ -20,7 +15,6 @@ export default function App() {
     lastname: '',
     email: ''
   })
-
 
   return (
     <>
