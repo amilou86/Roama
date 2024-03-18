@@ -13,19 +13,24 @@ export default function Signup(){
         formState: { errors }, 
     } = useForm({mode: 'onChange'});
 
-    const onSubmit = (signupData) => {
-        // console.log(signupData);
+    //watch value of password1 field to match confirm password
+    const password = watch("password1");
 
-        //save user to local storage on successful signup
-        let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+    //fetch list of users from local storage
+    let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+    console.log(listOfUsers);
+    //if no users, set list of users to empty array
         if(listOfUsers === null){
             listOfUsers = [];
         }
+    
+    const onSubmit = (signupData) => {
+        // console.log(signupData);
+        //save user to local storage on successful signup    
         listOfUsers.push(signupData);
         localStorage.setItem("usersRoama", JSON.stringify(listOfUsers));
-        
+        //alert user on successful signup        
     }
-    const password = watch("password1");
 
     return(
         <div className="signPage d-flex bg-primary vh-100 justify-content-center align-items-center">
@@ -86,7 +91,11 @@ export default function Signup(){
                         placeholder="Username*"
                         name="username"
                         {...register("username", {
-                            required: "Please enter username"
+                            required: "Please enter username",
+                           validate: (value) => {
+                            return !listOfUsers.some(user => user.username === value) || "username taken. Please try another"
+                           }
+                            
                         })}
                     />
                 </div>
@@ -109,6 +118,9 @@ export default function Signup(){
                             pattern: {
                                 value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
                                 message: "Enter Valid email",
+                            },
+                            validate: (value) => {
+                                return !listOfUsers.some(user => user.email === value) || "email exists! Please login"
                             }
                         })}
                     />
