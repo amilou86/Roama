@@ -1,4 +1,4 @@
-import { API_KEY } from './keyConfig';
+// import { API_KEY } from './keyConfig';
 
 // Function to fetch translations from the API
 export async function fetchTranslations(fixedTexts, selectedLanguage) {    
@@ -18,7 +18,7 @@ export async function fetchTranslations(fixedTexts, selectedLanguage) {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                'X-RapidAPI-Key': API_KEY,
+                'X-RapidAPI-Key': 'cc69d29c0fmsh3fd8bb05a08b116p1b6c72jsn70c3bb00f8b2',
                 'X-RapidAPI-Host': 'swift-translate.p.rapidapi.com'
             },
             body: JSON.stringify({
