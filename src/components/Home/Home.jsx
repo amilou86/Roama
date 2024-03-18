@@ -9,7 +9,6 @@ import FriendCards from "../FriendCards/friendCards";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as bootstrap from "bootstrap";
 
-// import { translateText } from './components/utils/api.js';
 export default function Home() {
   return (
     <div className="container-fluid">
