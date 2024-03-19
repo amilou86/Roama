@@ -21,40 +21,36 @@ export default function Login(props){
     
 
     const onSubmit = (loginData) => {
-        toast.success(<div >Welcome <strong className="toast-text">{loginData.username}</strong></div>,{
-            icon: <PiAirplaneTiltFill className="form-icon" />,
-        }
-        );
-        navigate('/home');
         props.setUserData({
             username: loginData.username,
             firstname: loginData.firstname,
             lastname: loginData.lastname,
             email: loginData.email
         })
-        // check user exists in list of signed up users
-        // const listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
-        // if(listOfUsers !== null){ 
 
-        //     const loggedInUser = listOfUsers.filter(user => (user.email === loginData.username || user.username === loginData.username) && user.password === loginData.password1);
-        //     console.log(loggedInUser);
-        //     if(loggedInUser.length === 1){
-        //         props.setUserData({
-        //             username: loggedInUser[0].username,
-        //             firstname: loggedInUser[0].firstname,
-        //             lastname: loggedInUser[0].lastname,
-        //             email: loggedInUser[0].email
-        //         })
-        //         toast.success(<div>Welcome <strong className="toast-text">{loggedInUser[0].firstname}</strong>!</div>, {
-        //             icon: <PiAirplaneTiltFill className="form-icon" />,
-        //         });
-        //         navigate('/home');
-        //     }else {
-        //         toast.error('Incorrect login details!')
-        //     }
-        // } else { 
-        //     toast.info('Please sign up!')
-        // }
+        //check user exists in list of signed up users
+        const listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+        if(listOfUsers !== null){ 
+
+            const loggedInUser = listOfUsers.filter(user => (user.email === loginData.username || user.username === loginData.username) && user.password1 === loginData.password);
+            console.log(loggedInUser);
+            if(loggedInUser.length === 1){
+                props.setUserData({
+                    username: loggedInUser[0].username,
+                    firstname: loggedInUser[0].firstname,
+                    lastname: loggedInUser[0].lastname,
+                    email: loggedInUser[0].email
+                })
+                toast.success(<div>Welcome <strong className="toast-text">{loggedInUser[0].firstname}</strong>!</div>, {
+                    icon: <PiAirplaneTiltFill className="form-icon" />,
+                });
+                navigate('/home');
+            }else {
+                toast.error('Incorrect login details!')
+            }
+        } else { 
+            toast.info('Please sign up!')
+        }
     }
 
     return(
@@ -75,7 +71,7 @@ export default function Login(props){
                         placeholder="Username/Email*"
                         name="username"
                         {...register("username", {
-                            // required: "Please enter username"
+                            required: "Please enter username"
                         })}                       
                     />
                 </div>
@@ -96,7 +92,7 @@ export default function Login(props){
                         placeholder="Password*"
                         name="password"
                         {...register("password", {
-                            // required: "Please enter your password", 
+                            required: "Please enter your password", 
                         })}
                     />
                 </div>
