@@ -57,19 +57,6 @@ export default function Scroll() {
   currentPosts.push(...posts.slice(0, indexOfLastPost))
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // pagination using load more anchor tag
-  //   const PAGE_SIZE = 3; // or whatever you like
-  //   const [index, setIndex] = useState(0);
-  //   const [visibleData, setVisibleData] = useState([]);
-  //   useEffect(() => {
-  //     const numberOfItems = PAGE_SIZE * (index + 1);
-  //     const newArray = [];
-  //     for (let i = 0; i < posts.length; i++) {
-  //       if (i < numberOfItems) newArray.push(posts[i]);
-  //     }
-  //     setVisibleData(newArray);
-  //   }, [index]);
-
   return (
     <div className="col" style={{ overflow: "scroll" }} ref={rootRef}>
 
@@ -77,10 +64,6 @@ export default function Scroll() {
 
         <Post />
 
-        {/* load more posts */}
-        {/* {visibleData.map((post, index) => ( */}
-
-        {/* pagination to load more posts */}
         {currentPosts.map((post, index) => (
           <Feed
             key={index}
@@ -91,12 +74,6 @@ export default function Scroll() {
             time={post.timestamp}
           />
         ))}
-
-
-        {/* load more anchor tag */}
-        {/* <div id="load-more">
-        <a onClick={() => setIndex(index + 1)}> Load More </a>
-      </div> */}
 
         <div ref={lastItemRef} style={{ height: "1rem" }}></div>
       </div>
