@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaUser }  from "react-icons/fa6";
 import { IoBag } from "react-icons/io5";
+import toast from 'react-hot-toast';
 
 export default function Login(props){
 
@@ -18,6 +19,7 @@ export default function Login(props){
     
 
     const onSubmit = (loginData) => {
+        toast.success("Welcome!");
         navigate('/home');
         props.setUserData({
             username: loginData.username,
