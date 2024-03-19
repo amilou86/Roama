@@ -1,8 +1,9 @@
+// import Phrases from "../../components/utils/phrases.json";
 import React, { useEffect, useState } from "react";
 import { fetchTranslations } from "../utils/api";
 import PhraseCard from "./phrasecard";
-import Logout from "../Logout/Logout";
 import DropDown from "./dropdown"
+
 
 export default function RightNav() {
   // Define state variables using useState hook
@@ -42,6 +43,20 @@ export default function RightNav() {
 
   // Render translated texts as PhraseCard components
   return (
+    <div>
+      <div className="translation-container">
+        <h2>Translation</h2>
+        <h4>Here are some helpful phrases:</h4>
+        <div className="card-container">
+          {Phrases.map((phraseObj) => (
+            <div className="card mb-3" key={phraseObj.id}>
+              <div className="card-body">
+                <h5 className="card-title">{phraseObj.phrase}</h5>
+                {/* code to translate text */}
+              </div>
+            </div>
+          ))}
+        </div>
     <div className="translation-container">
       <h4 className="text-center">Helpful Phrases</h4>
       <DropDown onSelectLanguage={setSelectedLanguage} />
@@ -51,5 +66,7 @@ export default function RightNav() {
         ))}
       </div>
     </div>
+  </div>
+ </div>
   );
 }

@@ -11,3 +11,12 @@
 .input-area {
   background-color: rgba(238, 238, 238, 0.377);
 }
+
+.upload-picture {
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.img-upload {
+  padding: 0 30px;
+}

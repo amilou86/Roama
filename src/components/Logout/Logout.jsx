@@ -12,6 +12,7 @@ export default function Logout() {
         navigate('/');
     }
   return (
+
     <Button id="logout" variant="primary" size="sm" onClick={handleClick}>
       Logout
     </Button>
