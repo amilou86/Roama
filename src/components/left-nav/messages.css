@@ -1,15 +1,83 @@
 .messages-container{
     position: relative;
-    top: 250px;
     width: 100%;
-    height: 350px;
-    background: rgb(144,234,231);
-    background: linear-gradient(90deg, rgba(144,234,231,1) 0%, rgba(85,255,191,1) 100%);
+    height: 310px;
+    background-color: rgb(255, 255, 255);
     border-radius: 50px;
+    margin-top: 30px;
 }
 
 .message-title{
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
+    position: relative;
+    font-family: "Raleway Dots", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    background: -webkit-linear-gradient(rgb(0, 195, 255), rgb(4, 212, 184));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 10px;
+    text-wrap: nowrap;
+}
+
+.btn-text-container{
+    display: flex;
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 5%;
+    border-radius: 30px;
+    border: none;
+    padding: 0;
+}
+
+.text-container{
+    display: flex;
+    width: 90%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+}
+
+.message-profile{
+    display: flex;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.message-profile-username{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin-bottom: 0px;
+    overflow: hidden;
+    padding-left: 5px;
+    margin-top: 2px;
+}
+
+.message-profile-info{
+    width: 70%;
+    text-align: start;
+    margin-left: 10px;
+}
+
+.message-profile-text{
+    font-size: 13px;
+    margin: auto 0;
+    color: rgb(105, 105, 105);
+    padding-left: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    text-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+.active{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 247, 62);
+    border-radius: 50%;
+    margin-top: 20px;
+    left: 88%;
 }
