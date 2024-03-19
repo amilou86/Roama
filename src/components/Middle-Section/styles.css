@@ -90,18 +90,16 @@
 .page-link:hover {
   background-color: #5fe0dd !important;
 }
+
 .a {
   text-align: center;
 }
+
 .a:hover {
   cursor: pointer !important;
 }
 
-#load-more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 #new-post-form {
   margin-block-start: 10% !important;
@@ -132,4 +130,7 @@
 #new-post-btn:hover {
     color: black;
 }
+
+
+
 
