@@ -12,7 +12,11 @@
     font-size: smaller;
     color: #e66c0f;        
 }
-
+.toast-text{
+    color:#2FC8E5;
+    font-size: large;
+    font-style: italic;
+}
 .form-control{
     margin-block-end: 0;
 }
