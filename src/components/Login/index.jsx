@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaUser }  from "react-icons/fa6";
 import { IoBag } from "react-icons/io5";
+import { PiAirplaneTiltFill } from "react-icons/pi";
 import toast from 'react-hot-toast';
 
 export default function Login(props){
@@ -19,7 +20,10 @@ export default function Login(props){
     
 
     const onSubmit = (loginData) => {
-        toast.success("Welcome!");
+        toast.success("Welcome!",{
+            icon: <PiAirplaneTiltFill className="form-icon" />
+        }
+        );
         navigate('/home');
         props.setUserData({
             username: loginData.username,
@@ -27,28 +31,28 @@ export default function Login(props){
             lastname: loginData.lastname,
             email: loginData.email
         })
-        // console.log(loginData);
-        //check user exists in list of signed up users
+        // check user exists in list of signed up users
         // const listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
-        // console.log(listOfUsers);
-        // if(listOfUsers !== null){
-            
-        //     const loggedInUser = listOfUsers.filter(user => user.username === loginData.username);
-            
+        // if(listOfUsers !== null){ 
+
+        //     const loggedInUser = listOfUsers.filter(user => (user.email === loginData.username || user.username === loginData.username) && user.password === loginData.password1);
+        //     console.log(loggedInUser);
         //     if(loggedInUser.length === 1){
-        //         // console.log(loggedInUser)
         //         props.setUserData({
         //             username: loggedInUser[0].username,
         //             firstname: loggedInUser[0].firstname,
         //             lastname: loggedInUser[0].lastname,
         //             email: loggedInUser[0].email
         //         })
+        //         toast.success(<div>Welcome <strong>{loggedInUser[0].firstname}</strong>!</div>, {
+        //             icon: <PiAirplaneTiltFill className="form-icon" />,
+        //         });
         //         navigate('/home');
         //     }else {
-        //         alert("Incorrect login details!");
+        //         toast.error('Incorrect login details!')
         //     }
-        // } else {
-        //     alert("Please sign up!")
+        // } else { 
+        //     toast.info('Please sign up!')
         // }
     }
 
@@ -66,7 +70,7 @@ export default function Login(props){
                     <input 
                         type="text"
                         className="form-control" 
-                        placeholder="Username*"
+                        placeholder="Username/Email*"
                         name="username"
                         {...register("username", {
                             // required: "Please enter username"
