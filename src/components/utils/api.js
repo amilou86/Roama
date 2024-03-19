@@ -1,4 +1,4 @@
-import { API_KEY } from './keyConfig';
+// import { API_KEY } from './keyConfig';
 
 // Function to fetch translations from the API
 export async function fetchTranslations(fixedTexts, selectedLanguage) {

@@ -1,5 +1,4 @@
-import React from "react";
-import Phrases from "../../components/utils/phrases.json";
+// import Phrases from "../../components/utils/phrases.json";
 import React, { useEffect, useState } from "react";
 import { fetchTranslations } from "../utils/api";
 import PhraseCard from "./phrasecard";
@@ -67,6 +66,7 @@ export default function RightNav() {
         ))}
       </div>
     </div>
+  </div>
  </div>
   );
 }

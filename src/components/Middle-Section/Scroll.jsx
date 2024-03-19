@@ -1,9 +1,8 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Pagination from "../Pagination/Pagination";
 import "./styles.css";
+import Post from "./Post"
 import Feed from "./Feed";
-import Post from "./Post";
 import posts from "../utils/random-posts.json";
 export default function Scroll() {
 
@@ -58,9 +57,9 @@ export default function Scroll() {
   // get current posts
 
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  // const indexOfLastPost = currentPage * postsPerPage;
+  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  // const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
   let indexOfLastPost = currentPage * postsPerPage;
   const currentPosts = [];
@@ -71,11 +70,11 @@ export default function Scroll() {
   currentPosts.push(...posts.slice(0, indexOfLastPost))
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const button = document.getElementById("instant-top-button");
+  // const button = document.getElementById("instant-top-button");
   // to scroll to top
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, [currentPage]);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: "instant" });
+  // }, [currentPage]);
 
 
 
@@ -119,5 +118,7 @@ export default function Scroll() {
 
         <div ref={lastItemRef} style={{ height: "1rem" }}></div>
       </div>
-)};
+      </div>
+  )
+}
 
