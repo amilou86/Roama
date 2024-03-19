@@ -74,7 +74,7 @@ export default function Post() {
             </div>
             <div className="d-flex post-options">
               <div className="img-upload">
-                <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/>
+                <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange} />
                 <AiOutlinePicture onClick={handleClick} />
                 <p>Upload Image</p>
               </div>
