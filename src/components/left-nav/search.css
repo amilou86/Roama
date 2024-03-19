@@ -1,42 +1,41 @@
-body{
+body {
     margin: 0;
 }
 
-#root{
+#root {
     position: relative;
     margin-left: 0px !important;
     margin-right: 0px;
     padding: 0px !important;
 
-    height: 100vw;
 }
 
-.logo{
+.logo {
     position: absolute;
     object-fit: contain;
     width: 260px;
     margin-top: 10px;
 }
 
-.logo-container{
+.logo-container {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.left-nav{
+.left-nav {
     width: 100%;
     height: 200px;
     background-color: rgb(255, 255, 255);
 }
 
-.leftnav-search{
+.leftnav-search {
     position: relative;
     top: 130px;
     margin-left: 9%;
     background-color: rgba(212, 212, 212, 0.8);
     font-size: 18px;
-    padding:  6px 10px;
+    padding: 6px 10px;
     padding-left: 60px;
     border-radius: 12px;
     border-width: 0px;
@@ -47,7 +46,7 @@ body{
     color: rgb(68, 68, 68);
 }
 
-.search-icon{
+.search-icon {
     position: absolute;
     top: 130px;
     left: 3vw;
