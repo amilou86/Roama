@@ -23,6 +23,9 @@
 .form-control{
     margin-block-end: 0;
 }
+.landing-forms{
+    margin-block-end: 0 !important;
+}
 
 .form-control:focus {
     border-color: #5FE0DD;
