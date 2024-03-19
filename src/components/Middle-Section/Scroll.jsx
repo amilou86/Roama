@@ -1,10 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Pagination from "../Pagination/Pagination";
 import "./styles.css";
 import Feed from "./Feed";
 import Post from "./Post";
 import posts from "../utils/random-posts.json";
 export default function Scroll() {
+
+  // fetching data with json-server
+
+  //   const [newPosts, setNewPosts] = useState([]);
+
   const rootRef = useRef()
   const observerRef = useRef()
   const lastItemRef = useRef()
@@ -33,21 +39,29 @@ export default function Scroll() {
     observerRef.current.observe(lastItemRef.current)
   }, [observerRef.current, lastItemRef.current])
 
+
   //   useEffect(() => {
   //     fetch("http://localhost:8000/posts")
   //       .then((result) => {
   //         return result.json();
   //       })
   //       .then((data) => {
-  //         setPosts(data);
+  //         setNewPosts(data);
   //       });
   //   }, []);
 
   //   pagination of posts
+
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
+  const postsPerPage = 3;
 
   // get current posts
+
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
   let indexOfLastPost = currentPage * postsPerPage;
   const currentPosts = [];
   while (indexOfLastPost > posts.length) {
@@ -55,14 +69,42 @@ export default function Scroll() {
     indexOfLastPost -= posts.length
   }
   currentPosts.push(...posts.slice(0, indexOfLastPost))
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const button = document.getElementById("instant-top-button");
+  // to scroll to top
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [currentPage]);
+
+
+
+  const navigate = useNavigate();
+  const postForm = (event) => {
+    event.preventDefault();
+    navigate("/newpost");
+  };
 
   return (
-    <div className="col" style={{ overflow: "scroll" }} ref={rootRef}>
+    <div id="main-section">
 
-      <div id="main-section">
 
-        <Post />
+        {/* navigating to post in a new page */}
+
+        <input
+          id="post-prompt"
+          className="form-control"
+          type="text"
+          placeholder="Start a post"
+          onClick={postForm}
+        />
+
+      
+
+        {/* pagination to load more posts */}
+
+       <div className="col" style={{ overflow: "scroll" }} ref={rootRef}>
+
 
         {currentPosts.map((post, index) => (
           <Feed
@@ -77,6 +119,5 @@ export default function Scroll() {
 
         <div ref={lastItemRef} style={{ height: "1rem" }}></div>
       </div>
-    </div>
-  );
-}
+)};
+

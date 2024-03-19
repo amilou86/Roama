@@ -66,7 +66,7 @@
 }
 
 .form-control {
-  margin-block-end: 10px;
+  margin-block-end: 10px !important;
 }
 
 #post-prompt {
@@ -99,8 +99,38 @@
   cursor: pointer !important;
 }
 
-#load-more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+
+#new-post-form {
+  margin-block-start: 10% !important;
+  padding: 40px;
 }
+
+#form-container {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+#submit-btn {
+  text-align: center;
+}
+
+#new-post-btn {
+  background-image: linear-gradient(
+    to right,
+    #04b7e5,
+    #2fc8e5,
+    #5fe0dd,
+    #90eae7
+  );
+  border: none;
+}
+
+#new-post-btn:hover {
+    color: black;
+}
+
+
+
+
