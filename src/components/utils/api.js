@@ -1,16 +1,16 @@
 // import { API_KEY } from './keyConfig';
 
 // Function to fetch translations from the API
-export async function fetchTranslations(fixedTexts, selectedLanguage) {    
+export async function fetchTranslations(fixedTexts, selectedLanguage) {
 
     // Log Selected Language
     // console.log("Selected Language:", selectedLanguage);
 
     const url = 'https://swift-translate.p.rapidapi.com/translate';
-  
+
     // Object to store translated texts
     const translatedTextsCopy = {};
-  
+
     // Loop through each fixed text
     for (const text of fixedTexts) {
         // Options for the fetch request
@@ -27,7 +27,7 @@ export async function fetchTranslations(fixedTexts, selectedLanguage) {
                 targetLang: selectedLanguage // Use the selected language as the target language for translation
             })
         };
-  
+
         try {
             // Log Request URL
             // console.log("Request URL:", url);
@@ -53,6 +53,6 @@ export async function fetchTranslations(fixedTexts, selectedLanguage) {
             console.error("Error:", error.message);
         }
     }
-  
+
     return translatedTextsCopy;
 }
