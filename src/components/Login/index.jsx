@@ -71,7 +71,7 @@ export default function Login(props){
                     </div>
                     <input 
                         type="text"
-                        className="form-control" 
+                        className="form-control landing-forms" 
                         placeholder="Username/Email*"
                         name="username"
                         {...register("username", {
@@ -92,7 +92,7 @@ export default function Login(props){
                     
                     <input 
                         type="password"
-                        className="form-control" 
+                        className="form-control landing-forms" 
                         placeholder="Password*"
                         name="password"
                         {...register("password", {

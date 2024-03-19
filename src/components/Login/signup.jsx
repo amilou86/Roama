@@ -58,7 +58,7 @@ export default function Signup(){
                         </div>
                         <input 
                         type="text" 
-                        className="form-control rounded-end" 
+                        className="form-control landing-forms rounded-end" 
                         placeholder="First name*"
                         name="firstname"
                         {...register("firstname", {
@@ -77,7 +77,7 @@ export default function Signup(){
                         </div>
                         <input 
                         type="text" 
-                        className="form-control rounded-end" 
+                        className="form-control landing-forms rounded-end" 
                         placeholder="Last name*"
                         name="lastname"
                         {...register("lastname", {
@@ -97,7 +97,7 @@ export default function Signup(){
                     </div>
                     <input 
                         type="text" 
-                        className="form-control" 
+                        className="form-control landing-forms" 
                         placeholder="Username*"
                         name="username"
                         {...register("username", {
@@ -120,7 +120,7 @@ export default function Signup(){
                     </div>
                     <input 
                         type="email" 
-                        className="form-control" 
+                        className="form-control landing-forms" 
                         placeholder="Email*"
                         name="email"
                         {...register("email", {
@@ -146,7 +146,7 @@ export default function Signup(){
                     </div>
                     <input 
                         type="password" 
-                        className="form-control" 
+                        className="form-control landing-forms" 
                         placeholder="Password*"
                         name="password1"
                         {...register("password1", {
@@ -169,7 +169,7 @@ export default function Signup(){
                     </div>
                     <input 
                         type="password" 
-                        className="form-control" 
+                        className="form-control landing-forms" 
                         placeholder="Confirm password*"
                         name="password2"
                         {...register("password2", { 

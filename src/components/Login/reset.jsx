@@ -32,6 +32,7 @@ export default function Reset() {
             <InputGroup className="mb-3" controlId="email">
             <InputGroup.Text className='form-icon'><FaEnvelope/></InputGroup.Text>
               <Form.Control
+                className='landing-forms'
                 type="email"
                 placeholder="Email*"
                 autoFocus
@@ -40,6 +41,7 @@ export default function Reset() {
             <InputGroup className="mb-3" controlId="password1">
             <InputGroup.Text className='form-icon'><IoBag/></InputGroup.Text>
               <Form.Control
+                className='landing-forms'
                 type="password"
                 placeholder="New Password*"
               />
@@ -47,6 +49,7 @@ export default function Reset() {
             <InputGroup className="mb-3" controlId="password2">
             <InputGroup.Text className='form-icon'><IoBagCheck/></InputGroup.Text>
               <Form.Control
+                className='landing-forms'
                 type="password"
                 placeholder="Confirm Password*"
               />
