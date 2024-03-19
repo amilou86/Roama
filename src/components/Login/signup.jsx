@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaUser, FaEnvelope }  from "react-icons/fa6";
 import { IoBag, IoBagCheck } from "react-icons/io5";
+import toast from 'react-hot-toast';
 
 export default function Signup(){
 
@@ -13,19 +15,31 @@ export default function Signup(){
         formState: { errors }, 
     } = useForm({mode: 'onChange'});
 
-    const onSubmit = (signupData) => {
-        // console.log(signupData);
+    //watch value of password1 field to match confirm password
+    const password = watch("password1");
 
-        //save user to local storage on successful signup
-        let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+    const navigate = useNavigate();
+    
+    //fetch list of users from local storage
+    let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+    console.log(listOfUsers);
+    //if no users, set list of users to empty array
         if(listOfUsers === null){
             listOfUsers = [];
         }
+    
+    const onSubmit = (signupData) => {
+        // console.log(signupData);
+        //save user to local storage on successful signup    
         listOfUsers.push(signupData);
         localStorage.setItem("usersRoama", JSON.stringify(listOfUsers));
-        
+
+        //notify user on successful signup and navigate to login page
+        toast.success('Thank you for signing up! Please Login to continue', {
+            duration: 5000,
+        })
+        navigate('/');        
     }
-    const password = watch("password1");
 
     return(
         <div className="signPage d-flex bg-primary vh-100 justify-content-center align-items-center">
@@ -86,7 +100,11 @@ export default function Signup(){
                         placeholder="Username*"
                         name="username"
                         {...register("username", {
-                            required: "Please enter username"
+                            required: "Please enter username",
+                           validate: (value) => {
+                            return !listOfUsers.some(user => user.username === value) || "username taken. Please try another"
+                           }
+                            
                         })}
                     />
                 </div>
@@ -109,6 +127,9 @@ export default function Signup(){
                             pattern: {
                                 value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
                                 message: "Enter Valid email",
+                            },
+                            validate: (value) => {
+                                return !listOfUsers.some(user => user.email === value) || "email exists! Please login"
                             }
                         })}
                     />

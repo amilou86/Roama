@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlinePicture } from "react-icons/ai";
+import { FaRegImage } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import { useState, useRef } from "react";
@@ -62,20 +62,22 @@ export default function Post() {
                 </div>
               </form>
             </div>
-            <div className="row p-4 container">
+            <div className="row p-4 container" >
               {images.map((images, index) => (
-                <div className="image" key={index}>
-                  <span className="delete" onClick={() => deleteImage(index)}>
-                    &times;
-                  </span>
-                  <img src={images.url} alt={images.name} />
-                </div>
+                  <div className="image" key={index}>
+                    <span className="delete" onClick={() => deleteImage(index)}>
+                      &times;
+                    </span>
+                    <img src={images.url} alt={images.name} />
+                  </div>
               ))}
-            </div>
+              </div>
             <div className="d-flex post-options">
               <div className="img-upload">
+
                 <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/>
-                <AiOutlinePicture onClick={handleClick} />
+                <FaRegImage size={20} onClick={handleClick} className="upload-picture"/>
+
                 <p>Upload Image</p>
               </div>
             </div>
