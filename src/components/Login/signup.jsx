@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaUser, FaEnvelope }  from "react-icons/fa6";
 import { IoBag, IoBagCheck } from "react-icons/io5";
+import toast from 'react-hot-toast';
 
 export default function Signup(){
 
@@ -16,6 +18,8 @@ export default function Signup(){
     //watch value of password1 field to match confirm password
     const password = watch("password1");
 
+    const navigate = useNavigate();
+    
     //fetch list of users from local storage
     let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
     console.log(listOfUsers);
@@ -29,7 +33,12 @@ export default function Signup(){
         //save user to local storage on successful signup    
         listOfUsers.push(signupData);
         localStorage.setItem("usersRoama", JSON.stringify(listOfUsers));
-        //alert user on successful signup        
+
+        //notify user on successful signup and navigate to login page
+        toast.success('Thank you for signing up! Please Login to continue', {
+            duration: 5000,
+        })
+        navigate('/');        
     }
 
     return(
