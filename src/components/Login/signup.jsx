@@ -47,7 +47,8 @@ export default function Signup(){
             <form className= "signForm p-3 bg-white rounded d-flex flex-column justify-content-center align-items-center"
                 noValidate
                 onSubmit={handleSubmit(onSubmit)} >
-                <img className="w-50 mb-3" src="/roama-logo.png" alt="Roama" />
+                <img className="w-50" src="/roama-logo.png" alt="Roama" />
+                <hr className="mt-3 w-100 text-secondary"/>
                 <div className="form-group mb-3 d-flex justify-content-between gap-2 w-100">
                     <div className="input-group name-box">
                         <div className="input-group-prepend">
@@ -186,7 +187,7 @@ export default function Signup(){
                     className="btn signBtn mt-4 w-100 rounded border-0"
                 >Sign up
                 </button>   
-                <hr className="mt-4 w-100"/>
+                <hr className="mt-4 w-100 text-secondary"/>
                 <div className="mb-3">
                     <small>
                         Already a Roama? 

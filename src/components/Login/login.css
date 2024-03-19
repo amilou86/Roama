@@ -7,6 +7,9 @@
 .signForm{
     width: 90vw;   
 }
+.form-title{
+    color:#04D4C4
+}
 
 .errorMsg{
     font-size: smaller;
