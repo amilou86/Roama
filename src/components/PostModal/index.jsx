@@ -62,16 +62,16 @@ export default function Post() {
                 </div>
               </form>
             </div>
+            <div className="row p-4 container" >
               {images.map((images, index) => (
-                <div className="row p-4 container" key={index}>
-                  <div className="image" >
+                  <div className="image" key={index}>
                     <span className="delete" onClick={() => deleteImage(index)}>
                       &times;
                     </span>
                     <img src={images.url} alt={images.name} />
                   </div>
-                </div>
               ))}
+              </div>
             <div className="d-flex post-options">
               <div className="img-upload">
                 <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/>
