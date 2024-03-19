@@ -52,7 +52,7 @@ export default function Scroll() {
   //   pagination of posts
 
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 3;
+  const postsPerPage = 2;
 
   // get current posts
 
@@ -85,9 +85,10 @@ export default function Scroll() {
   };
 
   return (
-    <div id="main-section">
 
 
+    <div className="col scrollBar" style={{ overflow: "scroll" }} ref={rootRef}>
+      <div id="main-section">
         {/* navigating to post in a new page */}
 
         <input
@@ -97,14 +98,7 @@ export default function Scroll() {
           placeholder="Start a post"
           onClick={postForm}
         />
-
-      
-
         {/* pagination to load more posts */}
-
-       <div className="col" style={{ overflow: "scroll" }} ref={rootRef}>
-
-
         {currentPosts.map((post, index) => (
           <Feed
             key={index}
@@ -118,7 +112,7 @@ export default function Scroll() {
 
         <div ref={lastItemRef} style={{ height: "1rem" }}></div>
       </div>
-      </div>
+    </div>
   )
 }
 

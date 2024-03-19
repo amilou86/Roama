@@ -117,20 +117,18 @@
 }
 
 #new-post-btn {
-  background-image: linear-gradient(
-    to right,
-    #04b7e5,
-    #2fc8e5,
-    #5fe0dd,
-    #90eae7
-  );
+  background-image: linear-gradient(to right,
+      #04b7e5,
+      #2fc8e5,
+      #5fe0dd,
+      #90eae7);
   border: none;
 }
 
 #new-post-btn:hover {
-    color: black;
+  color: black;
 }
 
-
-
-
+.scrollBar::-webkit-scrollbar {
+  display: none;
+}
