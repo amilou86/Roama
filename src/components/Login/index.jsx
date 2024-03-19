@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import Reset from "./reset";
 import { FaUser }  from "react-icons/fa6";
 import { IoBag } from "react-icons/io5";
 import { PiAirplaneTiltFill } from "react-icons/pi";
@@ -60,7 +61,8 @@ export default function Login(props){
         <div className="signPage d-flex bg-primary vh-100 justify-content-center align-items-center">                
             <form className= "signForm p-3 bg-white rounded d-flex flex-column justify-content-center align-items-center" 
             onSubmit={handleSubmit(onSubmit)}>
-                <img className="w-50 mb-3" src="/roama-logo.png" alt="Roama" />
+                <img className="w-50" src="/roama-logo.png" alt="Roama" />
+                <hr className="mt-3 w-100 text-secondary"/>
                 <div className="input-group w-100">
                     <div className="input-group-prepend">
                         <span className="input-group-text h-100">
@@ -101,14 +103,15 @@ export default function Login(props){
                  {errors.password &&
                     <small className="ms-1 errorMsg">{errors.password.message}</small>}
                 <small className="form-text mt-2 ms-auto">
-                    <a href="#">Forgot Password?</a>
+                    
+                    <Reset/>
                 </small>
                 <button 
                     type="submit" 
                     className="btn signBtn mt-3 w-100 rounded border-0"
                 >Log in
                 </button>   
-                <hr className="mt-4 w-100"/>
+                <hr className="mt-4 w-100 text-secondary"/>
                 <div className="mb-3">
                     <small>
                         New to Roama? 
