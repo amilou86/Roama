@@ -1,0 +1,103 @@
+{
+  "posts": [
+    {
+      "username": "Jacinda Ardern",
+      "profilePicture": "/profile-pics/person_4.jpeg",
+      "postImage": "/post-images/nz.jpg",
+      "post": "Welcome to kiwi land!",
+      "timestamp": "Fri Mar 15 2024 22:46:15 GMT+0000"
+    },
+    {
+      "username": "Harvey Spectar",
+      "profilePicture": "/profile-pics/person_3.jpeg",
+      "postImage": "/post-images/nyc.jpg",
+      "post": "The city that never sleeps!",
+      "timestamp": "Fri Mar 15 2024 10:46:15 GMT+0000"
+    },
+    {
+      "username": "Antonio Banderas",
+      "profilePicture": "/profile-pics/person_2.jpeg",
+      "postImage": "/post-images/andalucia.jpg",
+      "post": "Beautiful Andalucia!",
+      "timestamp": "Fri Mar 14 2024 22:46:15 GMT+0000"
+    },
+    {
+      "username": "Jung",
+      "profilePicture": "/profile-pics/person_1.jpeg",
+      "postImage": "/post-images/korea.jpg",
+      "post": "Let us code?",
+      "timestamp": "Fri Mar 14 2024 19:46:15 GMT+0000"
+    },
+    {
+      "username": "Hosni Mubarak",
+      "profilePicture": "/profile-pics/person_2.jpeg",
+      "postImage": "/post-images/cairo.jpg",
+      "post": "The land of the Pharoahs.",
+      "timestamp": "Fri Mar 13 2024 22:46:15 GMT+0000"
+    },
+    {
+      "username": "Boris Johnson",
+      "profilePicture": "/profile-pics/person_5.jpeg",
+      "postImage": "/post-images/london.jpg",
+      "post": "Metropoletan city!",
+      "timestamp": "Fri Mar 13 2024 12:46:15 GMT+0000"
+    },
+    {
+      "username": "Elon Musk",
+      "profilePicture": "/profile-pics/person_4.jpeg",
+      "postImage": "/post-images/earth.jpg",
+      "post": "Do you still think the earth is flat!!",
+      "timestamp": "Fri Mar 12 2024 23:46:15 GMT+0000"
+    },
+    {
+      "username": "Chris Gardner",
+      "profilePicture": "/profile-pics/person_3.jpeg",
+      "postImage": "/post-images/sf.jpg",
+      "post": "Welcome to San Francisco",
+      "timestamp": "Fri Mar 12 2024 21:46:15 GMT+0000"
+    },
+    {
+      "username": "Alex Ferguson",
+      "profilePicture": "/profile-pics/person_2.jpeg",
+      "postImage": "/post-images/manu.jpg",
+      "post": "What do you think Roama is about?",
+      "timestamp": "Fri Mar 10 2024 20:46:15 GMT+0000"
+    },
+    {
+      "username": "Mohamed Salah",
+      "profilePicture": "/profile-pics/person_1.jpeg",
+      "postImage": "/post-images/liverpool.jpg",
+      "post": "Welcome to Roama!",
+      "timestamp": "Fri Mar 10 2024 19:46:15 GMT+0000"
+    },
+    {
+      "username": "logged in",
+      "profilePicture": "https://www.thispersondoesnotexist.com",
+      "postImage": "https://www.thispersondoesnotexist.com",
+      "post": "Not sure which image will I get?",
+      "timestamp": "2024-03-17T14:26:44.698Z"
+    },
+    {
+      "username": "logged in",
+      "profilePicture": "https://www.thispersondoesnotexist.com",
+      "postImage": "hello",
+      "post": "hello",
+      "timestamp": "2024-03-17T14:42:43.727Z"
+    },
+    {
+      "username": "logged in",
+      "profilePicture": "https://www.thispersondoesnotexist.com",
+      "postImage": "d",
+      "post": "d",
+      "timestamp": "2024-03-17T14:45:58.477Z"
+    },
+    {
+      "id": "6f33",
+      "username": "logged in",
+      "profilePicture": "https://www.thispersondoesnotexist.com",
+      "postImage": "f",
+      "post": "f",
+      "timestamp": "2024-03-17T14:46:57.286Z"
+    }
+  ]
+}

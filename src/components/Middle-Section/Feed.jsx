@@ -5,14 +5,11 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Collapsible from "./Collapsible";
 
-export default function Feed({ username, postImage, profilePicture, post }) {
+export default function Feed({ username, postImage, profilePicture, post, time }) {
   const inputRef = useRef();
   const [postComments, setPostComments] = useState([]);
 
   //   const [comment, setComment] = useState("");
-  // timestamp of post
-  let currentTime = new Date();
-  let postTime = currentTime;
   //   state of likes
   const [likes, setLikes] = useState(0);
   //   like button
@@ -50,7 +47,7 @@ export default function Feed({ username, postImage, profilePicture, post }) {
           </div>
           <div className="user-nickname">
             <span>
-              <Timestamp relative date={postTime} autoUpdate />
+            <Timestamp relative date={time} autoUpdate />
             </span>
           </div>
         </div>

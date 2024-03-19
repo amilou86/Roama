@@ -7,26 +7,26 @@ import RightNav from "../right-nav/index";
 import FriendList from "../FriendList/friendList";
 import FriendCards from "../FriendCards/friendCards";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FriendRequest from "../FriendRequest/friendRequest";
 import * as bootstrap from "bootstrap";
 
-// import { translateText } from './components/utils/api.js';
 export default function Home() {
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-3">
-          <Search />
-          <FriendList />
-          <Messages />
-        </div>
-        <div className="col-lg-6">
-          <Scroll />
-        </div>
-        <div className="col-lg-3">
-          <RightNav />
-          <Post />
-        </div>
+    <div style={{ height: "100vh", display: "flex", overflow: "hidden" }}>
+
+      <div className="col-lg-3">
+        <Search />
+        <FriendList />
+        <FriendRequest />
+        <Messages />
       </div>
+      <Scroll />
+
+      <div className="col-lg-3">
+        <RightNav />
+        <Post />
+      </div>
+
     </div>
   );
 }

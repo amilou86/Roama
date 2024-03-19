@@ -74,8 +74,10 @@ export default function Post() {
               </div>
             <div className="d-flex post-options">
               <div className="img-upload">
+
                 <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/>
                 <FaRegImage size={20} onClick={handleClick} className="upload-picture"/>
+
                 <p>Upload Image</p>
               </div>
             </div>

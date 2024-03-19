@@ -1,27 +1,52 @@
-    [
-        {
-            "friendName": "ami edwards",
-            "profilePic": "/profile-pics/person_2.jpeg",
-            "online": "true"
-        },
-        {
-            "friendName": "taha lakehal",
-            "profilePic": "/profile-pics/person_1.jpeg",
-            "online": "false"
-        },
-        {
-            "friendName": "andrew sinkinson",
-            "profilePic": "/profile-pics/person_3.jpeg",
-            "online": "true"
-        },
-        {
-            "friendName": "shalini sunkuru",
-            "profilePic": "/profile-pics/person_4.jpeg",
-            "online": "true"
-        },
-        {
-            "friendName": "kowk law",
-            "profilePic": "/profile-pics/person_5.jpeg",
-            "online": "false"
-        }
-    ]
+[
+    {
+        "friendName": "ami edwards",
+        "profilePic": "/profile-pics/person_2.jpeg",
+        "online": "true"
+    },
+    {
+        "friendName": "taha lakehal",
+        "profilePic": "/profile-pics/person_1.jpeg",
+        "online": "false"
+    },
+    {
+        "friendName": "andrew sinkinson",
+        "profilePic": "/profile-pics/person_3.jpeg",
+        "online": "true"
+    },
+    {
+        "friendName": "shalini sunkuru",
+        "profilePic": "/profile-pics/person_4.jpeg",
+        "online": "true"
+    },
+    {
+        "friendName": "kowk law",
+        "profilePic": "/profile-pics/man-3.jpeg",
+        "online": "false"
+    },
+    {
+        "friendName": "lila hussain",
+        "profilePic": "/profile-pics/woman-1.jpeg",
+        "online": "true"
+    },
+    {
+        "friendName": "nathan saide",
+        "profilePic": "/profile-pics/man-1.jpeg",
+        "online": "false"
+    },
+    {
+        "friendName": "aiyla demir",
+        "profilePic": "/profile-pics/woman-2.jpeg",
+        "online": "true"
+    },
+    {
+        "friendName": "narendar akula",
+        "profilePic": "/profile-pics/man-2.jpeg",
+        "online": "true"
+    },
+    {
+        "friendName": "mohamed bah",
+        "profilePic": "/profile-pics/man-5.jpeg",
+        "online": "true"
+    }
+]

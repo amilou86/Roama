@@ -1,17 +1,39 @@
-.signForm{
-    width: 90vw;
-   
-}
-
+/* background of page */
 .signPage{
     background-image: linear-gradient(to bottom right, #04F59B, #5FE0DD, #04DABA, #04D4C4, #2FC8E5);
 }
 
-#firstname{
-    width: 48% ;
+/* Form width */
+.signForm{
+    width: 90vw;   
 }
-#lastname{
-    width: 48%;
+
+.errorMsg{
+    font-size: smaller;
+    color: rgb(230, 108, 15);        
+}
+
+.form-control{
+    margin-block-end: 0;
+}
+
+.form-control:focus {
+    border-color: #5FE0DD;
+    box-shadow: 0 0 0 0.2rem rgba(95, 224, 221, 0.25);;
+} 
+
+.input-group-text{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-icon{
+
+    color: #5FE0DD;
+}
+
+.name-box{
+    align-self: flex-start;
 }
 .signBtn{
     background-image: linear-gradient(to right, #04B7E5, #2FC8E5, #5FE0DD, #90EAE7) ;
@@ -30,6 +52,8 @@ a:hover{
 ::placeholder{
     color: #5FE0DD !important;
 }
+
+/* width of form for larger devices */
 @media only screen and (min-width: 576px){
     .signForm{
         width: 75vw;
