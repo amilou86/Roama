@@ -6,11 +6,11 @@ import logo from "/roama-logo.png";
 import Logout from "../Logout/Logout";
 import "./styles.css";
 
-export default function Header() {
+export default function Header(props) {
   // get local storage
-  let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
-  const { firstname, username, lastname, email, password1 } = listOfUsers[0];
-
+  // let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+  const { username, firstname, lastname, email  } = props.userData;
+  
   return (
     <Navbar className="bg-body-light">
       <Container>
