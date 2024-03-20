@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import posts from "../utils/random-posts.json";
+import Header from "../Header";
 import "./styles.css";
 
 export default function Post() {
@@ -47,42 +48,45 @@ export default function Post() {
   };
 
   return (
-    <div id="form-container" className="container">
-      <form id="new-post-form" className="row" onSubmit={handleSubmit}>
-        <input
-          className="form-control post-form"
-          name="username"
-          type="hidden"
-          onChange={handleInputChange}
-          placeholder="First Name"
-        ></input>
-        <input
-          className="form-control post-form"
-          name="profilePicture"
-          type="hidden"
-          onChange={handleInputChange}
-          placeholder="Profile Picture"
-        ></input>
-        <input
-          className="form-control post-form"
-          name="postImage"
-          type="text"
-          placeholder="Post Image"
-          onChange={handleInputChange}
-        ></input>
-        <textarea
-          className="form-control post-form"
-          name="post"
-          type="text"
-          onChange={handleInputChange}
-          placeholder="What do you want to talk about?"
-        ></textarea>
-        <div id="submit-btn">
-          <Button id="new-post-btn" type="submit" size="sm">
-            Post
-          </Button>
-        </div>
-      </form>
-    </div>
+    <>
+      <Header />
+      <div id="form-container" className="container">
+        <form id="new-post-form" className="row" onSubmit={handleSubmit}>
+          <input
+            className="form-control post-form"
+            name="username"
+            type="hidden"
+            onChange={handleInputChange}
+            placeholder="First Name"
+          ></input>
+          <input
+            className="form-control post-form"
+            name="profilePicture"
+            type="hidden"
+            onChange={handleInputChange}
+            placeholder="Profile Picture"
+          ></input>
+          <input
+            className="form-control post-form"
+            name="postImage"
+            type="text"
+            placeholder="Post Image"
+            onChange={handleInputChange}
+          ></input>
+          <textarea
+            className="form-control post-form"
+            name="post"
+            type="text"
+            onChange={handleInputChange}
+            placeholder="What do you want to talk about?"
+          ></textarea>
+          <div id="submit-btn">
+            <Button id="new-post-btn" type="submit" size="sm">
+              Post
+            </Button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
