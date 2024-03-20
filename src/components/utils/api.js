@@ -1,7 +1,7 @@
-// import { API_KEY } from './keyConfig';
+import { API_KEY } from './keyConfig';
 
-// Function to fetch translations from the API
-export async function fetchTranslations(fixedTexts, selectedLanguage) {
+// Function to fetch translations for each phrase
+export async function fetchTranslations(phrase, selectedLanguage) {    
 
     // Log Selected Language
     // console.log("Selected Language:", selectedLanguage);
@@ -10,15 +10,15 @@ export async function fetchTranslations(fixedTexts, selectedLanguage) {
 
     // Object to store translated texts
     const translatedTextsCopy = {};
-
-    // Loop through each fixed text
-    for (const text of fixedTexts) {
+  
+    // Loop through each phrase
+    for (const text of phrase) {
         // Options for the fetch request
         const options = {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                'X-RapidAPI-Key': 'cc69d29c0fmsh3fd8bb05a08b116p1b6c72jsn70c3bb00f8b2',
+                'X-RapidAPI-Key': API_KEY,
                 'X-RapidAPI-Host': 'swift-translate.p.rapidapi.com'
             },
             body: JSON.stringify({
