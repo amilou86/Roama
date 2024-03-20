@@ -11,25 +11,29 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FriendRequest from "../FriendRequest/friendRequest";
 import * as bootstrap from "bootstrap";
 
+
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
-      <div className="row">
-        <div className="col-lg-3">
-          <Search />
-          <FriendList />
-          <FriendRequest />
-          <Messages />
-        </div>
-        <div className="col-lg-6">
-          <Scroll />
-        </div>
+      <div style={{ height: "100vh", display: "flex", overflow: "hidden" }}>
+        <div className="row">
+          <div className="col-lg-3">
+            <Post />
+            <Search />
+            <FriendList />
+            <FriendRequest />
+            <Messages />
+          </div>
+          <div className="col-lg-6">
+            <Scroll />
+          </div>
 
-        <div className="col-lg-3">
-          {/* <RightNav /> */}
+          <div className="col-lg-3">
+            <RightNav />
+          </div>
         </div>
-      </div>
-    </div>
+       </div>
+    </>
   );
 }
