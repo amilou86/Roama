@@ -11,9 +11,8 @@ export default function Header() {
   let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
   const { firstname, username, lastname, email, password1 } = listOfUsers[0];
 
-  console.log(listOfUsers);
   return (
-    <Navbar className="bg-body-tertiary">
+    <Navbar className="bg-body-light">
       <Container>
         <Navbar.Brand href="#home">
           <img
