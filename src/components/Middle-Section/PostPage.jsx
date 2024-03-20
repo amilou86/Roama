@@ -2,8 +2,8 @@ import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import posts from "../utils/random-posts.json";
+import Header from "../Header";
 import "./styles.css";
-import { FaRegImage } from "react-icons/fa";
 
 export default function Post() {
   const inputRef = useRef(null);
@@ -57,76 +57,51 @@ export default function Post() {
     event.preventDefault();
     const { name, value } = event.target;
     setNewPost({ ...newPost, [name]: value });
-
-    // adding new post with post method
-
-    // fetch("http://localhost:8000/posts", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(newpost),
-    // }).then(() => {
-    //   return;
-    // });
-
     // adding new post to posts list in the begining
     posts.unshift(newPost);
     navigate("/home");
   };
 
   return (
-    <div id="form-container" className="container">
-      <form id="new-post-form" className="row" onSubmit={handleSubmit}>
-        <input
-          className="form-control post-form"
-          name="username"
-          type="hidden"
-          onChange={handleInputChange}
-          placeholder="First Name"
-        ></input>
-        <input
-          className="form-control post-form"
-          name="profilePicture"
-          type="hidden"
-          onChange={handleInputChange}
-          placeholder="Profile Picture"
-        ></input>
-        <input
-          className="form-control post-form"
-          name="postImage"
-          type="text"
-          placeholder="Post Image"
-          onChange={handleInputChange}
-        ></input>
-        <textarea
-          className="form-control post-form"
-          name="post"
-          type="text"
-          onChange={handleInputChange}
-          placeholder="What do you want to talk about?"
-        ></textarea>
-
-        {images.map((images, index) => (
-          <div className="image" key={index}>
-            <span className="delete" onClick={() => deleteImage(index)}>
-              &times;
-            </span>
-            <img src={images.url} alt={images.name} />
+    <>
+      <Header />
+      <div id="form-container" className="container">
+        <form id="new-post-form" className="row" onSubmit={handleSubmit}>
+          <input
+            className="form-control post-form"
+            name="username"
+            type="hidden"
+            onChange={handleInputChange}
+            placeholder="First Name"
+          ></input>
+          <input
+            className="form-control post-form"
+            name="profilePicture"
+            type="hidden"
+            onChange={handleInputChange}
+            placeholder="Profile Picture"
+          ></input>
+          <input
+            className="form-control post-form"
+            name="postImage"
+            type="text"
+            placeholder="Post Image"
+            onChange={handleInputChange}
+          ></input>
+          <textarea
+            className="form-control post-form"
+            name="post"
+            type="text"
+            onChange={handleInputChange}
+            placeholder="What do you want to talk about?"
+          ></textarea>
+          <div id="submit-btn">
+            <Button id="new-post-btn" type="submit" size="sm">
+              Post
+            </Button>
           </div>
-        ))}
-
-        <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/>
-        <FaRegImage
-          size={20}
-          onClick={handleClick}
-          className="upload-picture"
-        />
-        <p>Upload Image</p>
-        <div id="submit-btn">
-          <Button id="new-post-btn" type="submit" size="sm">
-            Post
-          </Button>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </>
   );
 }

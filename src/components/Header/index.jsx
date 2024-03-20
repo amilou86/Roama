@@ -5,11 +5,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "/roama-logo.png";
 import Logout from "../Logout/Logout";
 import "./styles.css";
-
-export default function Header(props) {
+export default function Header() {
   // get local storage
-  // let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
-  const { username, firstname, lastname, email  } = props.userData;
+
+  let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+  const { username, firstname, lastname, email  } = listOfUsers[0];
   
   return (
     <Navbar className="bg-body-light">
