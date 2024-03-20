@@ -3,19 +3,18 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "/roama-logo.png";
-import avatar from "/profile.png";
 import Logout from "../Logout/Logout";
 import "./styles.css";
 
-export default function Header() {
+export default function Header(props) {
   // get local storage
-  let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
-  const { firstname, username, lastname, email, password1 } = listOfUsers[0];
-
+  // let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+  const { username, firstname, lastname, email  } = props.userData;
+  
   return (
     <Navbar className="bg-body-light">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/home">
           <img
             alt=""
             src={logo}
@@ -32,10 +31,10 @@ export default function Header() {
           <NavDropdown.Item id="logout-drop" href="#action/3.1">
             {firstname} {lastname}
           </NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">
+          <NavDropdown.Item href="/profile">
             <i className="far fa-user-circle"></i> Profile
           </NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">
+          <NavDropdown.Item href="/settings">
             <i className="fa fa-gear"></i> Settings
           </NavDropdown.Item>
           <NavDropdown.Divider />
