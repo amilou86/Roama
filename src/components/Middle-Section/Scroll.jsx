@@ -4,14 +4,9 @@ import "./styles.css";
 import Feed from "./Feed";
 import posts from "../utils/random-posts.json";
 export default function Scroll() {
-  // fetching data with json-server
-
-  //   const [newPosts, setNewPosts] = useState([]);
-
   const rootRef = useRef();
   const observerRef = useRef();
   const lastItemRef = useRef();
-
   useEffect(() => {
     if (!rootRef.current) {
       return;
@@ -37,26 +32,10 @@ export default function Scroll() {
     observerRef.current.observe(lastItemRef.current);
   }, [observerRef.current, lastItemRef.current]);
 
-  //   useEffect(() => {
-  //     fetch("http://localhost:8000/posts")
-  //       .then((result) => {
-  //         return result.json();
-  //       })
-  //       .then((data) => {
-  //         setNewPosts(data);
-  //       });
-  //   }, []);
-
-  //   pagination of posts
-
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 2;
 
   // get current posts
-
-  // const indexOfLastPost = currentPage * postsPerPage;
-  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  // const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
   let indexOfLastPost = currentPage * postsPerPage;
   const currentPosts = [];
@@ -65,13 +44,6 @@ export default function Scroll() {
     indexOfLastPost -= posts.length;
   }
   currentPosts.push(...posts.slice(0, indexOfLastPost));
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  // const button = document.getElementById("instant-top-button");
-  // to scroll to top
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, behavior: "instant" });
-  // }, [currentPage]);
 
   const navigate = useNavigate();
   const postForm = (event) => {
@@ -91,7 +63,6 @@ export default function Scroll() {
           placeholder="Start a post"
           onClick={postForm}
         />
-        {/* pagination to load more posts */}
         {currentPosts.map((post, index) => (
           <Feed
             key={index}
@@ -103,8 +74,8 @@ export default function Scroll() {
           />
         ))}
 
-        <div ref={lastItemRef} style={{ height: "1rem" }}></div>
       </div>
+      <div ref={lastItemRef} style={{ height: "1rem" }}></div>
     </div>
   );
 }

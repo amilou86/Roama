@@ -5,3 +5,9 @@
 #profile-pic {
     width: 10%;
 }
+
+.list-groups {
+    width: 50%;
+    text-align: center;
+    margin: 50px;
+}
