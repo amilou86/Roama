@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "/home"
+  to = "/profile"
+  status = 200
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
