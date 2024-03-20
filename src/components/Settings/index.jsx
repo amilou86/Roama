@@ -3,6 +3,7 @@ import avatar from "/profile.png";
 import Header from "../Header/index";
 import ListGroup from "react-bootstrap/ListGroup";
 import "../Header/styles.css";
+import "./style.css"
 
 
 export default function Profile() {
@@ -13,17 +14,19 @@ export default function Profile() {
   return (
     <div>
       <Header />
-      <ListGroup className="list-groups">
-        <ListGroup.Item>
-          <img id="profile-pic" src={avatar} alt="" />
-        </ListGroup.Item>
-        <ListGroup.Item> username: {username}</ListGroup.Item>
-        <ListGroup.Item>
-          name: {firstname} {lastname}
-        </ListGroup.Item>
-        <ListGroup.Item> email: {email}</ListGroup.Item>
-        <ListGroup.Item>password: {password1}</ListGroup.Item>
-      </ListGroup>
+        <div className="container setting-wrapper">
+        <ListGroup className="list-groups">
+          <ListGroup.Item>
+            <img id="profile-pic" src={avatar} alt="" />
+          </ListGroup.Item>
+          <ListGroup.Item> username: {username}</ListGroup.Item>
+          <ListGroup.Item>
+            name: {firstname} {lastname}
+          </ListGroup.Item>
+          <ListGroup.Item> email: {email}</ListGroup.Item>
+          <ListGroup.Item>password: {password1}</ListGroup.Item>
+        </ListGroup>
+      </div>
     </div>
   );
 }

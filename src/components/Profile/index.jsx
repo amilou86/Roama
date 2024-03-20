@@ -29,7 +29,7 @@ export default function Profile() {
     <div>
       <Header />
       <div className="container profile-wrapper">
-        <ListGroup className="list-groups row wrapper">
+        <ListGroup className="list-groups">
           <ListGroup.Item>
             <span>
               <input
