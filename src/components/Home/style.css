@@ -3,4 +3,8 @@
     display: none;
     }
 }
+
+#page-header {
+    display: sticky;
+}
     
