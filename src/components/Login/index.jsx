@@ -49,22 +49,24 @@ export default function Login(props){
                 toast.error('Incorrect login details!')
             }
         } else { 
-            toast.info('Please sign up!')
+            toast.error('Please sign up!');
         }
     }
 
     return(
         <div className="signPage d-flex bg-primary vh-100 justify-content-center align-items-center">                
-            <form className= "signForm p-3 bg-white rounded d-flex flex-column justify-content-center align-items-center" 
-            onSubmit={handleSubmit(onSubmit)}>
+            <div className= "signForm p-3 bg-white rounded d-flex flex-column justify-content-center align-items-center" 
+            >
                 <img className="w-50" src="/roama-logo.png" alt="Roama" />
                 <hr className="mt-3 w-100 text-secondary"/>
-                <div className="input-group w-100">
+                <form  className="w-100" onSubmit={handleSubmit(onSubmit)}>
+                <div className="input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text h-100">
                             <FaUser  className="form-icon" />
                         </span>                       
                     </div>
+                    
                     <input 
                         type="text"
                         className="form-control landing-forms" 
@@ -100,21 +102,30 @@ export default function Login(props){
                     <small className="ms-1 errorMsg">{errors.password.message}</small>}
                 <small className="form-text mt-2 ms-auto">
                     
-                    <Reset/>
+                    
                 </small>
                 <button 
                     type="submit" 
                     className="btn signBtn mt-3 w-100 rounded border-0"
                 >Log in
                 </button>   
-                <hr className="mt-4 w-100 text-secondary"/>
-                <div className="mb-3">
-                    <small>
+                </form>
+
+                <small className="d-block mt-2  ms-auto">
+                        <Reset/>
+                </small>
+
+                <hr className=" w-100 text-secondary"/>
+
+                <div className="mb-3">                 
+                    <small className="mx-2">
                         New to Roama? 
                         <Link to='/signup' className="ms-2 ">Sign up</Link>
                     </small>
-                </div>                    
-            </form>
+                </div>                   
+            </div>
+
+            
         </div>
     )
 }
