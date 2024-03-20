@@ -74,10 +74,6 @@
   margin-inline-start: 20%;
 }
 
-#main-section {
-  margin-block-start: 10%;
-}
-
 .pagination {
   display: flex;
   justify-content: center;
