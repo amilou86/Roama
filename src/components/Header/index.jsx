@@ -9,8 +9,8 @@ import "./styles.css";
 export default function Header() {
   // get local storage
   let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
-  const { firstname, username, lastname, email, password1 } = listOfUsers[0];
-
+  const { username, firstname, lastname, email  } = listOfUsers[0];
+  
   return (
     <Navbar className="bg-body-light">
       <Container>

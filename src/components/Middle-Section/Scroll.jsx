@@ -3,10 +3,14 @@ import { useNavigate } from "react-router-dom";
 import "./styles.css";
 import Feed from "./Feed";
 import posts from "../utils/random-posts.json";
-export default function Scroll() {
+export default function Scroll({ posts }) {
+
   const rootRef = useRef();
   const observerRef = useRef();
   const lastItemRef = useRef();
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 2;
+
   useEffect(() => {
     if (!rootRef.current) {
       return;
@@ -31,10 +35,6 @@ export default function Scroll() {
     }
     observerRef.current.observe(lastItemRef.current);
   }, [observerRef.current, lastItemRef.current]);
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
-
   // get current posts
 
   let indexOfLastPost = currentPage * postsPerPage;

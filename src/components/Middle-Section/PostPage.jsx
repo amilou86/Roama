@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import posts from "../utils/random-posts.json";
@@ -6,6 +6,32 @@ import Header from "../Header";
 import "./styles.css";
 
 export default function Post() {
+  const inputRef = useRef(null);
+  const [images, setImages] = useState([]);
+
+  const handleClick = () => inputRef.current.click();
+
+  const handleFileChange = (event) => {
+    const files = event.target.files;
+    if (files.length === 0) return;
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].type.split("/")[0] !== "image") continue;
+      if (!images.some((event) => event.name === files[i].name)) {
+        setImages((prevImages) => [
+          ...prevImages,
+          {
+            name: files[i].name,
+            url: URL.createObjectURL(files[i]),
+          },
+        ]);
+      }
+    }
+  };
+
+  const deleteImage = (index) => {
+    setImages((prevImages) => prevImages.filter((_, i) => i != index));
+  };
+
   // state of new post
   const [newPost, setNewPost] = useState({
     username: "logged in",
@@ -31,17 +57,6 @@ export default function Post() {
     event.preventDefault();
     const { name, value } = event.target;
     setNewPost({ ...newPost, [name]: value });
-
-    // adding new post with post method
-
-    // fetch("http://localhost:8000/posts", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(newpost),
-    // }).then(() => {
-    //   return;
-    // });
-
     // adding new post to posts list in the begining
     posts.unshift(newPost);
     navigate("/home");

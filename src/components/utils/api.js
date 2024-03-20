@@ -1,7 +1,7 @@
-import { API_KEY } from './keyConfig';
+// import { API_KEY } from './keyConfig';
 
 // Function to fetch translations for each phrase
-export async function fetchTranslations(phrase, selectedLanguage) {    
+export async function fetchTranslations(phrase, selectedLanguage) {
 
     // Log Selected Language
     // console.log("Selected Language:", selectedLanguage);
@@ -10,7 +10,7 @@ export async function fetchTranslations(phrase, selectedLanguage) {
 
     // Object to store translated texts
     const translatedTextsCopy = {};
-  
+
     // Loop through each phrase
     for (const text of phrase) {
         // Options for the fetch request
