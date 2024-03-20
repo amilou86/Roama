@@ -2,8 +2,8 @@
   {
     "id": "10",
 
-    "username": "Jacinda Ardern",
-    "profilePicture": "/profile-pics/person_4.jpeg",
+    "username": "ami edwards",
+    "profilePicture": "/profile-pics/person_2.jpeg",
     "postImage": "/post-images/nz.jpg",
     "post": "Welcome to kiwi land!",
     "timestamp": "Fri Mar 15 2024 22:46:15 GMT+0000"
@@ -11,8 +11,8 @@
   {
     "id": "9",
 
-    "username": "Harvey Spectar",
-    "profilePicture": "/profile-pics/person_3.jpeg",
+    "username": "taha lakehal",
+    "profilePicture": "/profile-pics/person_1.jpeg",
     "postImage": "/post-images/nyc.jpg",
     "post": "The city that never sleeps!",
     "timestamp": "Fri Mar 15 2024 10:46:15 GMT+0000"
@@ -20,8 +20,8 @@
   {
     "id": "8",
 
-    "username": "Antonio Banderas",
-    "profilePicture": "/profile-pics/person_2.jpeg",
+    "username": "andrew sinkinson",
+    "profilePicture": "/profile-pics/person_3.jpeg",
     "postImage": "/post-images/andalucia.jpg",
     "post": "Beautiful Andalucia!",
     "timestamp": "Fri Mar 14 2024 22:46:15 GMT+0000"
@@ -29,8 +29,8 @@
   {
     "id": "7",
 
-    "username": "Jung",
-    "profilePicture": "/profile-pics/person_1.jpeg",
+    "username": "shalini sunkuru",
+    "profilePicture": "/profile-pics/person_4.jpeg",
     "postImage": "/post-images/korea.jpg",
     "post": "Let us code?",
     "timestamp": "Fri Mar 14 2024 19:46:15 GMT+0000"
@@ -38,8 +38,8 @@
   {
     "id": "6",
 
-    "username": "Hosni Mubarak",
-    "profilePicture": "/profile-pics/person_2.jpeg",
+    "username": "kowk law",
+    "profilePicture": "/profile-pics/man-3.jpeg",
     "postImage": "/post-images/cairo.jpg",
     "post": "The land of the Pharoahs.",
     "timestamp": "Fri Mar 13 2024 22:46:15 GMT+0000"
@@ -47,8 +47,8 @@
   {
     "id": "5",
 
-    "username": "Boris Johnson",
-    "profilePicture": "/profile-pics/person_5.jpeg",
+    "username": "lila hussain",
+    "profilePicture": "/profile-pics/woman-1.jpeg",
     "postImage": "/post-images/london.jpg",
     "post": "Metropoletan city!",
     "timestamp": "Fri Mar 13 2024 12:46:15 GMT+0000"
@@ -56,8 +56,8 @@
   {
     "id": "4",
 
-    "username": "Elon Musk",
-    "profilePicture": "/profile-pics/person_4.jpeg",
+    "username": "nathan saide",
+    "profilePicture": "/profile-pics/man-1.jpeg",
     "postImage": "/post-images/earth.jpg",
     "post": "Do you still think the earth is flat!!",
     "timestamp": "Fri Mar 12 2024 23:46:15 GMT+0000"
@@ -65,8 +65,8 @@
   {
     "id": "3",
 
-    "username": "Chris Gardner",
-    "profilePicture": "/profile-pics/person_3.jpeg",
+    "username": "aiyla demir",
+    "profilePicture": "/profile-pics/woman-2.jpeg",
     "postImage": "/post-images/sf.jpg",
     "post": "Welcome to San Francisco",
     "timestamp": "Fri Mar 12 2024 21:46:15 GMT+0000"
@@ -74,8 +74,8 @@
   {
     "id": "2",
 
-    "username": "Alex Ferguson",
-    "profilePicture": "/profile-pics/person_2.jpeg",
+    "username": "narendar akula",
+    "profilePicture": "/profile-pics/man-2.jpeg",
     "postImage": "/post-images/manu.jpg",
     "post": "What do you think Roama is about?",
     "timestamp": "Fri Mar 10 2024 20:46:15 GMT+0000"
@@ -83,8 +83,8 @@
   {
     "id": "1",
 
-    "username": "Mohamed Salah",
-    "profilePicture": "/profile-pics/person_1.jpeg",
+    "username": "mohamed bah",
+    "profilePicture": "/profile-pics/man-5.jpeg",
     "postImage": "/post-images/liverpool.jpg",
     "post": "Welcome to Roama!",
     "timestamp": "Fri Mar 10 2024 19:46:15 GMT+0000"

@@ -11,8 +11,10 @@ export default function FriendCards({ friendName, profilePic, online }) {
             <h3>{friendName}</h3>
             <p>
                 {online === "true" || online === true ? (
+                    //ENTER ACTIVE HERE
                     <FaPlaneCircleCheck />
                 ) : (
+                    //ENTER ACTIVE HERE
                     <FaPlaneCircleXmark />
                 )}
             </p>
