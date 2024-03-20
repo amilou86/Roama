@@ -3,7 +3,7 @@ import { fetchTranslations } from "../utils/api";
 import PhraseCard from "./phrasecard";
 import Logout from "../Logout/Logout";
 import DropDown from "./dropdown";
-import TranslationBox from "./TranslationBox";
+import TranslationBox from "./translationbox";
 import "./styles.css"
 
 export default function RightNav() {
