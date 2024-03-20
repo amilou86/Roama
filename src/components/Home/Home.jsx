@@ -40,12 +40,6 @@ export default function Home() {
           <Post />
         </div>
       </div>
-        <Scroll />     
-      <div className="col-lg-3">
-        <RightNav />
-        <Post />
-      </div>
-    </div>
     </>
   );
 }
