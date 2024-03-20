@@ -1,10 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import posts from "../utils/random-posts.json";
 import "./styles.css";
+import { FaRegImage } from "react-icons/fa";
 
 export default function Post() {
+  const inputRef = useRef(null);
+  const [images, setImages] = useState([]);
+
+  const handleClick = () => inputRef.current.click();
+
+  const handleFileChange = (event) => {
+    const files = event.target.files;
+    if (files.length === 0) return;
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].type.split("/")[0] !== "image") continue;
+      if (!images.some((event) => event.name === files[i].name)) {
+        setImages((prevImages) => [
+          ...prevImages,
+          {
+            name: files[i].name,
+            url: URL.createObjectURL(files[i]),
+          },
+        ]);
+      }
+    }
+  };
+
+  const deleteImage = (index) => {
+    setImages((prevImages) => prevImages.filter((_, i) => i != index));
+  };
+
   // state of new post
   const [newPost, setNewPost] = useState({
     username: "logged in",
@@ -77,6 +104,23 @@ export default function Post() {
           onChange={handleInputChange}
           placeholder="What do you want to talk about?"
         ></textarea>
+
+        {images.map((images, index) => (
+          <div className="image" key={index}>
+            <span className="delete" onClick={() => deleteImage(index)}>
+              &times;
+            </span>
+            <img src={images.url} alt={images.name} />
+          </div>
+        ))}
+
+        {/* <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/> */}
+        <FaRegImage
+          size={20}
+          onClick={handleClick}
+          className="upload-picture"
+        />
+        <p>Upload Image</p>
         <div id="submit-btn">
           <Button id="new-post-btn" type="submit" size="sm">
             Post
