@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <div>
       <Header />
+      <div style={}></div>
       <div className="row">
         <div className="col-lg-3">
           <Search />
@@ -24,7 +25,7 @@ export default function Home() {
           <Scroll />
         </div>
 
-        <div className="col-lg-3">{/* <RightNav /> */}</div>
+        <div className="col-lg-3"><RightNav /></div>
       </div>
     </div>
   );
