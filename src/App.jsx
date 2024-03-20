@@ -28,7 +28,7 @@ export default function App() {
             element={<Login userData={userData} setUserData={setUserData} />}
           />
           <Route path="/signup" element={<Signup />} />
-          <Route path='/home' element={<Home userData={userData}/>} />
+          <Route path='/home' element={<Home/>} />
           <Route path="/newpost" element={<Post />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
