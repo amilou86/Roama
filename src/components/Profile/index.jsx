@@ -17,9 +17,9 @@ export default function Profile() {
     setImages(URL.createObjectURL(files));
   };
 
-  const deleteImage = (index) => {
-    setImages((prevImages) => prevImages.filter((_, i) => i != index));
-  };
+  // const deleteImage = (index) => {
+  //   setImages((prevImages) => prevImages.filter((_, i) => i != index));
+  // };
   // get local storage
   let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
   const { firstname, username, lastname, email } = listOfUsers[0];

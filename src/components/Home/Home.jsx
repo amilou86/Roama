@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FriendRequest from "../FriendRequest/friendRequest";
 import Search from '../left-nav/Search';
 import postsData from '../utils/random-posts.json';
+import "./style.css"
 
 export default function Home() {
 
@@ -27,7 +28,7 @@ export default function Home() {
     <>
       <Header />
       <div style={{ height: "100vh", display: "flex", overflow: "hidden" }}>
-        <div className="col-lg-3">
+        <div className="col-lg-3 nav">
           <Search onChange={handleSearch} value={searchTerm} />
           <FriendList />
           <FriendRequest />
@@ -35,9 +36,8 @@ export default function Home() {
         </div>
         {/* {filteredResults.map(post => (<Scroll posts={filteredResults} key={post.id} />))} */}
         <Scroll posts={filteredResults} />
-        <div className="col-lg-3">
+        <div className="col-lg-3 nav">
           <RightNav />
-          <Post />
         </div>
       </div>
     </>
