@@ -24,9 +24,7 @@ export default function Home() {
           <Scroll />
         </div>
 
-        <div className="col-lg-3">
-          {/* <RightNav /> */}
-        </div>
+        <div className="col-lg-3">{/* <RightNav /> */}</div>
       </div>
     </div>
   );
