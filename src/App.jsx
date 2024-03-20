@@ -23,7 +23,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Login userData={userData} setUserData={setUserData} />}  />
         <Route path='/signup' element={<Signup/>}  />
-        <Route path='/home' element={<Home/>} />
+        <Route path='/home' element={<Home userData={userData}/>} />
         <Route path='/newpost' element={<Post/>} />
       </Routes>
     </Router>
