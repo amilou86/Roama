@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./styles.css";
 import Feed from "./Feed";
 import posts from "../utils/random-posts.json";
-export default function Scroll({ posts }) {
+export default function Scroll() {
 
   const rootRef = useRef();
   const observerRef = useRef();
