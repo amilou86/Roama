@@ -30,9 +30,6 @@ export default function postSearch() {
     return (
         <>
             <div className="left-nav">
-                <div className="logo-container">
-                    <img className="logo" src={logo}></img>
-                </div>
                 <form className="search-container">
                     <span className="search-icon"><IoSearch /></span>
                     <input placeholder="Search" onChange={handleChange} value={searchTerm} className="leftnav-search" type="search"></input>

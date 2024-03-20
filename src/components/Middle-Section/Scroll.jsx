@@ -1,43 +1,41 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
-import Post from "./Post"
 import Feed from "./Feed";
 import posts from "../utils/random-posts.json";
 export default function Scroll() {
-
   // fetching data with json-server
 
   //   const [newPosts, setNewPosts] = useState([]);
 
-  const rootRef = useRef()
-  const observerRef = useRef()
-  const lastItemRef = useRef()
+  const rootRef = useRef();
+  const observerRef = useRef();
+  const lastItemRef = useRef();
 
   useEffect(() => {
     if (!rootRef.current) {
-      return
+      return;
     }
-    observerRef.current = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setCurrentPage((prev) => prev + 1
-
-          )
-        }
-      })
-    }, {
-      root: rootRef.current
-    })
-  }, [rootRef.current])
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCurrentPage((prev) => prev + 1);
+          }
+        });
+      },
+      {
+        root: rootRef.current,
+      }
+    );
+  }, [rootRef.current]);
 
   useEffect(() => {
     if (!observerRef.current || !lastItemRef.current) {
-      return
+      return;
     }
-    observerRef.current.observe(lastItemRef.current)
-  }, [observerRef.current, lastItemRef.current])
-
+    observerRef.current.observe(lastItemRef.current);
+  }, [observerRef.current, lastItemRef.current]);
 
   //   useEffect(() => {
   //     fetch("http://localhost:8000/posts")
@@ -56,7 +54,6 @@ export default function Scroll() {
 
   // get current posts
 
-
   // const indexOfLastPost = currentPage * postsPerPage;
   // const indexOfFirstPost = indexOfLastPost - postsPerPage;
   // const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
@@ -64,10 +61,10 @@ export default function Scroll() {
   let indexOfLastPost = currentPage * postsPerPage;
   const currentPosts = [];
   while (indexOfLastPost > posts.length) {
-    currentPosts.push(...posts)
-    indexOfLastPost -= posts.length
+    currentPosts.push(...posts);
+    indexOfLastPost -= posts.length;
   }
-  currentPosts.push(...posts.slice(0, indexOfLastPost))
+  currentPosts.push(...posts.slice(0, indexOfLastPost));
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   // const button = document.getElementById("instant-top-button");
@@ -76,8 +73,6 @@ export default function Scroll() {
   //   window.scrollTo({ top: 0, behavior: "instant" });
   // }, [currentPage]);
 
-
-
   const navigate = useNavigate();
   const postForm = (event) => {
     event.preventDefault();
@@ -85,8 +80,6 @@ export default function Scroll() {
   };
 
   return (
-
-
     <div className="col scrollBar" style={{ overflow: "scroll" }} ref={rootRef}>
       <div id="main-section">
         {/* navigating to post in a new page */}
@@ -113,6 +106,5 @@ export default function Scroll() {
         <div ref={lastItemRef} style={{ height: "1rem" }}></div>
       </div>
     </div>
-  )
+  );
 }
-

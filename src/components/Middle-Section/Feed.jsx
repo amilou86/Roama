@@ -1,16 +1,17 @@
 import React, { useRef, useState } from "react";
 import Timestamp from "react-timestamp";
 import "./styles.css";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import Collapsible from "./Collapsible";
 
-export default function Feed({ username, postImage, profilePicture, post, time }) {
+export default function Feed({
+  username,
+  postImage,
+  profilePicture,
+  post,
+  time,
+}) {
   const inputRef = useRef();
   const [postComments, setPostComments] = useState([]);
-
-  //   const [comment, setComment] = useState("");
-  //   state of likes
   const [likes, setLikes] = useState(0);
   //   like button
   const handleLikes = (event) => {
@@ -47,7 +48,7 @@ export default function Feed({ username, postImage, profilePicture, post, time }
           </div>
           <div className="user-nickname">
             <span>
-            <Timestamp relative date={time} autoUpdate />
+              <Timestamp relative date={time} autoUpdate />
             </span>
           </div>
         </div>
@@ -93,12 +94,6 @@ export default function Feed({ username, postImage, profilePicture, post, time }
               }
             }}
           ></input>
-          {/* <div id="comment-btn">
-            {" "}
-            <a href="#" onClick={handleSubmit}>
-              <i className="fa-regular fa-comment"></i>
-            </a>
-          </div> */}
         </div>
       )}
     </article>
