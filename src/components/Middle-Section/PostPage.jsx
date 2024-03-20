@@ -114,7 +114,7 @@ export default function Post() {
           </div>
         ))}
 
-        {/* <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/> */}
+        <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/>
         <FaRegImage
           size={20}
           onClick={handleClick}
