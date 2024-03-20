@@ -24,6 +24,7 @@
     "react-overlays": "^5.2.1",
     "react-router-dom": "^6.22.3",
     "react-timestamp": "^6.0.0",
+    "react-toastify": "^10.0.5",
     "styled-react-modal": "^3.1.1"
   },
   "devDependencies": {

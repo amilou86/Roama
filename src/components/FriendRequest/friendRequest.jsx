@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import requestsData from '../utils/requests.json';
+import { ToastContainer, toast } from 'react-toastify';
 import '../PostModal/style.css';
 
 export default function FriendRequest() {
@@ -27,9 +28,9 @@ export default function FriendRequest() {
         }
     };
 
-    const handleCloseRequestSent = () => {
-        setShowRequestSent(false);
-    };
+    // const handleCloseRequestSent = () => {
+    //     alert('roama requested');
+    // };
 
     const handleClearSearch = () => {
         setSearchTerm('');
@@ -76,9 +77,13 @@ export default function FriendRequest() {
                                 {foundFriend ? (
                                     <div className="friend-results">
                                         <h2>{foundFriend.friendName}</h2>
-                                        <button className="btn btn-primary" onClick={handleSendRequest}>
-                                            request roama
+                                        <button className="btn btn-primary" onClick={() => {
+                                            toast.success('Request sent!', { autoClose: 3000 });
+                                        }}>
+                                            Request Roama
                                         </button>
+
+                                        <ToastContainer />
                                     </div>
                                 ) : (
                                     <div className="no-results">
