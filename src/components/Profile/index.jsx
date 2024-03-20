@@ -3,6 +3,7 @@ import avatar from "/profile.png";
 import ListGroup from "react-bootstrap/ListGroup";
 import "../Header/styles.css";
 import { useState, useRef } from "react";
+import "./style.css"
 
 import Header from "../Header/index";
 
@@ -27,8 +28,8 @@ export default function Profile() {
   return (
     <div>
       <Header />
-      <div className="container">
-        <ListGroup className="list-groups">
+      <div className="container profile-wrapper">
+        <ListGroup className="list-groups row wrapper">
           <ListGroup.Item>
             <span>
               <input
