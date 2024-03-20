@@ -10,37 +10,22 @@ import postsData from "../utils/random-posts.json";
 import Scroll from '../Middle-Section/Scroll';
 
 
-export default function postSearch() {
-
-    // Setting initial state to the friendData json array
-    const [searchTerm, setSearchTerm] = useState('');
-    const [posts, setPosts] = useState(postsData);
-
+export default function postSearch({ onChange, value }) {
 
     const handleChange = (event) => {
-        const term = event.target.value.toLowerCase()
-        setSearchTerm(term)
-        console.log(searchTerm)
-        const filteredResults = postsData.filter((post) => post.username.toLowerCase().includes(searchTerm))
-        console.log(filteredResults)
-        setPosts(filteredResults)
-        console.log(posts)
+        onChange(event)
     }
+
 
     return (
         <>
             <div className="left-nav">
-                <form className="search-container">
+                <div className="search-container">
                     <span className="search-icon"><IoSearch /></span>
-                    <input placeholder="Search" onChange={handleChange} value={searchTerm} className="leftnav-search" type="search"></input>
-                </form>
+                    <input placeholder="Search" onChange={handleChange} value={value} className="leftnav-search" type="search"></input>
+                </div>
             </div>
-            {posts.map(post => (
-                <Scroll key={post.id} post={post} />
-            ))}
         </>
-
-
     )
 }
 

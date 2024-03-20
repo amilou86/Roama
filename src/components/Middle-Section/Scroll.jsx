@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./styles.css";
 import Feed from "./Feed";
 import posts from "../utils/random-posts.json";
-export default function Scroll() {
+export default function Scroll({ posts }) {
   // fetching data with json-server
 
   //   const [newPosts, setNewPosts] = useState([]);
@@ -11,6 +11,8 @@ export default function Scroll() {
   const rootRef = useRef();
   const observerRef = useRef();
   const lastItemRef = useRef();
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 2;
 
   useEffect(() => {
     if (!rootRef.current) {
@@ -37,26 +39,6 @@ export default function Scroll() {
     observerRef.current.observe(lastItemRef.current);
   }, [observerRef.current, lastItemRef.current]);
 
-  //   useEffect(() => {
-  //     fetch("http://localhost:8000/posts")
-  //       .then((result) => {
-  //         return result.json();
-  //       })
-  //       .then((data) => {
-  //         setNewPosts(data);
-  //       });
-  //   }, []);
-
-  //   pagination of posts
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
-
-  // get current posts
-
-  // const indexOfLastPost = currentPage * postsPerPage;
-  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  // const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
   let indexOfLastPost = currentPage * postsPerPage;
   const currentPosts = [];
@@ -67,11 +49,7 @@ export default function Scroll() {
   currentPosts.push(...posts.slice(0, indexOfLastPost));
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  // const button = document.getElementById("instant-top-button");
-  // to scroll to top
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, behavior: "instant" });
-  // }, [currentPage]);
+
 
   const navigate = useNavigate();
   const postForm = (event) => {
