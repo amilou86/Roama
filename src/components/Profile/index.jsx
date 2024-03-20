@@ -2,7 +2,7 @@ import React from "react";
 import avatar from "/profile.png";
 import ListGroup from "react-bootstrap/ListGroup";
 import "../Header/styles.css";
-import { FaRegImage } from "react-icons/fa";
+// import { FaRegImage } from "react-icons/fa";
 import { useState, useRef } from "react";
 
 import Header from "../Header/index";
@@ -18,9 +18,9 @@ export default function Profile() {
     setImages(URL.createObjectURL(files));
   };
 
-  const deleteImage = (index) => {
-    setImages((prevImages) => prevImages.filter((_, i) => i != index));
-  };
+  // const deleteImage = (index) => {
+  //   setImages((prevImages) => prevImages.filter((_, i) => i != index));
+  // };
   // get local storage
   let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
   const { firstname, username, lastname, email, password1 } = listOfUsers[0];
