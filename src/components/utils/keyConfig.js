@@ -1,2 +1,2 @@
-const API_KEY = 'e1e06600a1msh8b72f53e4c1f939p1c1568jsne1d7d4d6cba7';
+const API_KEY = 'd9e3bdf8c5msh3ceb0280aa378adp1e7ea6jsn89882efa04aa';
 export { API_KEY };
