@@ -19,10 +19,7 @@ export default function Home() {
         <FriendRequest />
         <Messages />
       </div>
-      <div className="col-lg-6">
-        <Scroll />
-      </div>
-      
+        <Scroll />     
       <div className="col-lg-3">
         <RightNav />
         <Post />
