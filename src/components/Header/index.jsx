@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "/roama-logo.png";
+import avatar from "/profile.png";
 import Logout from "../Logout/Logout";
 import "./styles.css";
 
@@ -32,10 +33,10 @@ export default function Header() {
             {firstname} {lastname}
           </NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">
-            <i class="far fa-user-circle"></i> Profile
+            <i className="far fa-user-circle"></i> Profile
           </NavDropdown.Item>
           <NavDropdown.Item href="#action/3.3">
-            <i class="fa fa-gear"></i> Settings
+            <i className="fa fa-gear"></i> Settings
           </NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action/3.4">
