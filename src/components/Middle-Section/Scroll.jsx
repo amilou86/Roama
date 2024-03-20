@@ -4,9 +4,6 @@ import "./styles.css";
 import Feed from "./Feed";
 import posts from "../utils/random-posts.json";
 export default function Scroll({ posts }) {
-  // fetching data with json-server
-
-  //   const [newPosts, setNewPosts] = useState([]);
 
   const rootRef = useRef();
   const observerRef = useRef();
@@ -38,14 +35,7 @@ export default function Scroll({ posts }) {
     }
     observerRef.current.observe(lastItemRef.current);
   }, [observerRef.current, lastItemRef.current]);
-
-<<<<<<< HEAD
-=======
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
-
   // get current posts
->>>>>>> 04cf10d364c140a43448d9ff13bc17e0122549d0
 
   let indexOfLastPost = currentPage * postsPerPage;
   const currentPosts = [];
@@ -55,12 +45,6 @@ export default function Scroll({ posts }) {
   }
   currentPosts.push(...posts.slice(0, indexOfLastPost));
 
-<<<<<<< HEAD
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-
-=======
->>>>>>> 04cf10d364c140a43448d9ff13bc17e0122549d0
   const navigate = useNavigate();
   const postForm = (event) => {
     event.preventDefault();

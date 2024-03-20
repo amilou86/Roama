@@ -5,10 +5,8 @@ import Post from "../PostModal/index";
 import RightNav from "../right-nav/index";
 import FriendList from "../FriendList/friendList";
 import Header from "../Header";
-import FriendCards from "../FriendCards/friendCards";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FriendRequest from "../FriendRequest/friendRequest";
-import * as bootstrap from "bootstrap";
 import Search from '../left-nav/Search';
 import postsData from '../utils/random-posts.json';
 

@@ -2,7 +2,6 @@ import React from "react";
 import avatar from "/profile.png";
 import ListGroup from "react-bootstrap/ListGroup";
 import "../Header/styles.css";
-import { FaRegImage } from "react-icons/fa";
 import { useState, useRef } from "react";
 
 import Header from "../Header/index";
@@ -29,10 +28,6 @@ export default function Profile() {
     <div>
       <Header />
       <div className="container">
-        {/* <div>
-        <input multiple ref={inputRef} style={{ display: "none" }} type="file" onChange={handleFileChange}/>
-        <FaRegImage size={20} onClick={handleClick} className="upload-picture"/>
-        </div> */}
         <ListGroup className="list-groups">
           <ListGroup.Item>
             <span>
