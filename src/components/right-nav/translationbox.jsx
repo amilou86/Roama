@@ -13,9 +13,6 @@ export default function TranslationBox({ selectedLanguage }) {
             const translation = await fetchTranslations([inputText], selectedLanguage);
             // Update the translated text state with the result
             setOutputText(translation[inputText]);
-            // Clear input text after translation
-            setInputText("");
-            // console.log(translation)
         } catch (error) {
             // Log an error if translation fails
             console.error("Error translating text:", error);
@@ -40,18 +37,18 @@ export default function TranslationBox({ selectedLanguage }) {
     }, [selectedLanguage]);
 
     return (
-        <div className = "text-center">
+        <div className="text-center">
             {/* Input field for user to enter text */}
             <input 
-                type ="text" 
-                className = "textInput"
+                type="text" 
+                className="textInput form-control"
                 placeholder="Enter text to translate" 
                 value={inputText} 
                 onChange={(event) => setInputText(event.target.value)} 
-                onKeyUp={handleKeyPress} // Handle enter key press               
+                onKeyUp={handleKeyPress} // Handle enter key press                
             />
             {/* Button to trigger translation */}
-            <button onClick={handleTranslate} className="btn btn-primary">Translate</button>
+            <button onClick={handleTranslate} className="btn btn-primary mt-1" style={{ width: "100%" }}>Translate</button>
             {/* Display translated text */}
             <h1>{outputText}</h1>
         </div>
