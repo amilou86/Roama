@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
       <Header id="page-header" />
-      <div style={{ height: "100vh", display: "flex", overflow: "hidden" }}>
+      <div id='main-section' style={{ height: "100vh", display: "flex", overflow: "hidden" }}>
         <div className="col-lg-3 nav">
           <Search onChange={handleSearch} value={searchTerm} />
           <FriendList />
