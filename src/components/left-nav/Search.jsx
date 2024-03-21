@@ -4,6 +4,7 @@ import React from "react";
 
 export default function postSearch({ onChange, value }) {
   const handleChange = (event) => {
+    event.preventDefault()
     onChange(event);
   };
 

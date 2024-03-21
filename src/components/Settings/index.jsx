@@ -121,7 +121,7 @@ export default function Profile() {
               Close
             </Button>
             <Button variant="primary" size="sm" onClick={changeData}>
-              Post
+              Save
             </Button>
           </Modal.Footer>
         </Modal>

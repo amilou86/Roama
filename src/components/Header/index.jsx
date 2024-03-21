@@ -26,7 +26,7 @@ export default function Header() {
         <NavDropdown
           title={username}
           id="basic-nav-dropdown"
-          className="justify-content-end"
+          className="justify-content-end drop-menu"
         >
           <NavDropdown.Item id="logout-drop" href="#action/3.1">
             {firstname} {lastname}

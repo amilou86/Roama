@@ -3,13 +3,17 @@ import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import posts from "../utils/random-posts.json";
 import Header from "../Header";
+import avatar from "/profile.png";
 import "./styles.css";
 
 export default function Post() {
+    // get current logged in user information
+  let listOfUsers = JSON.parse(localStorage.getItem("usersRoama"));
+  const currentUser = listOfUsers[0].username;
   // state of new post
   const [newPost, setNewPost] = useState({
-    username: "logged in",
-    profilePicture: "https://www.thispersondoesnotexist.com",
+    username: currentUser,
+    profilePicture: avatar,
     postImage: "",
     post: "",
     timestamp: new Date(),

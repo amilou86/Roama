@@ -11,3 +11,7 @@
     text-align: center;
     margin: 50px;
 }
+
+.drop-menu {
+    padding-inline-end: 20px;
+}
