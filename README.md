@@ -40,8 +40,7 @@ Visit Roama deployed at: https://roama.netlify.app/
 
 ## Screenshot
 
-![Screenshot of login page](/screenshot-roama-login.png)
-![Screenshot of home page](/screenshot-roama-home.png)
+![Screenshot of home page](public/screenshot-roama-home.png)
 
 ## Usage
 
