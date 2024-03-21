@@ -10,3 +10,13 @@
     margin-right: 10px
 
 }
+
+.btn {
+    background-image: linear-gradient(to right, #04B7E5, #2FC8E5, #5FE0DD, #90EAE7) ;
+    outline: none;
+    border: none;
+}
+
+.btn:hover {    
+    color: black;           
+}

@@ -7,7 +7,7 @@ import TranslationBox from "./translationbox";
 import "./styles.css"
 
 export default function RightNav() {
-    // Define state variables using useState hook
+    // State variables for translated texts and selected language
     const [translatedTexts, setTranslatedTexts] = useState({});
     const [selectedLanguage, setSelectedLanguage] = useState("es");    
 
