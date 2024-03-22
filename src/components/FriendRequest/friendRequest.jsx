@@ -37,6 +37,8 @@ export default function FriendRequest() {
         setFoundFriend(null);
     };
 
+    let friendRequestSender = false
+
     return (
         <div className="main-post-init">
             <button type="button" className="btn btn-primary init-post" data-bs-toggle="modal" data-bs-target="#post">
@@ -78,12 +80,12 @@ export default function FriendRequest() {
                                     <div className="friend-results">
                                         <h2>{foundFriend.friendName}</h2>
                                         <button className="btn btn-primary" onClick={() => {
-                                            toast.success('Request sent!', { autoClose: 3000 });
+                                            console.log("hi")
+                                            friendRequestSender = true;
                                         }}>
                                             Request Roama
                                         </button>
-
-                                        <ToastContainer />
+                                        {friendRequestSender && <p>Request Sent!</p>}
                                     </div>
                                 ) : (
                                     <div className="no-results">
